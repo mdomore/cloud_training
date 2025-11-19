@@ -1,0 +1,46 @@
+[Unit]
+Description=Example Custom Service
+Documentation=https://example.com/docs
+After=network.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=myuser
+Group=mygroup
+WorkingDirectory=/opt/myapp
+ExecStart=/usr/bin/python3 /opt/myapp/app.py
+ExecReload=/bin/kill -HUP $MAINPID
+ExecStop=/bin/kill -SIGTERM $MAINPID
+Restart=always
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=myapp
+
+# Environment variables
+Environment="APP_ENV=production"
+Environment="LOG_LEVEL=info"
+EnvironmentFile=-/etc/myapp/config
+
+# Resource limits
+LimitNOFILE=65536
+LimitNPROC=4096
+
+# Security
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/opt/myapp/data
+
+[Install]
+WantedBy=multi-user.target
+
+# Notes:
+# 1. Place this file in /etc/systemd/system/
+# 2. Run: sudo systemctl daemon-reload
+# 3. Enable: sudo systemctl enable myapp.service
+# 4. Start: sudo systemctl start myapp.service
+# 5. Check: sudo systemctl status myapp.service
+
