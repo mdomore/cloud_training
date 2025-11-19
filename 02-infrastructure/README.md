@@ -1,47 +1,25 @@
-# Phase 2: Infrastructure as Code (IaC)
+# Phase 02: Infrastructure
 
-## Overview
+## 📚 Documentation
 
-Learn to automate infrastructure provisioning and configuration management. This phase covers the tools and practices that enable reproducible, version-controlled infrastructure.
+All learning content for this phase has been consolidated into the main documentation.
 
-## Learning Objectives
+**👉 Read the complete documentation:** [../docs/02-infrastructure.md](../docs/02-infrastructure.md)
 
-By the end of this phase, you should be able to:
-- Write Ansible playbooks for configuration management
-- Provision infrastructure with Terraform across multiple clouds
-- Containerize applications with Docker
-- Deploy and manage containerized applications with Kubernetes
+## 📁 Directory Purpose
 
-## Structure
+This directory is for:
+- **Exercises**: Practical exercises and hands-on work
+- **Examples**: Code examples and configurations
+- **Notes**: Your personal notes and learnings
 
-- **[01-configuration-management](./01-configuration-management/)** - Ansible for automated configuration
-- **[02-infrastructure-provisioning](./02-infrastructure-provisioning/)** - Terraform/OpenTofu for infrastructure provisioning
-- **[03-containerization](./03-containerization/)** - Docker and Kubernetes
+## 🚀 Getting Started
 
-## Prerequisites
-
-- Phase 1: Foundations completed
-- Understanding of Linux and networking
-- Basic scripting knowledge
-
-## Estimated Time
-
-- Configuration Management: 2-3 weeks
-- Infrastructure Provisioning: 3-4 weeks
-- Containerization: 3-4 weeks
-
-**Total: 8-11 weeks**
-
-## How to Use This Phase
-
-1. Start with configuration management (Ansible)
-2. Move to infrastructure provisioning (Terraform)
-3. Learn containerization (Docker, then Kubernetes)
-4. Practice combining all tools together
-5. Document your infrastructure code and patterns
+1. Read the consolidated documentation in `docs/02-infrastructure.md`
+2. Complete exercises in this directory
+3. Review examples in this directory
+4. Document your progress and notes here
 
 ---
 
-**Previous Phase:** [Phase 1: Foundations](../01-foundations/)  
-**Next Phase:** [Phase 3: Cloud Platforms](../03-cloud-platforms/)
-
+**Main Documentation:** [Phase 02: Infrastructure](../docs/02-infrastructure.md)

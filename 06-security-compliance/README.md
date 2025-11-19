@@ -1,46 +1,25 @@
-# Phase 6: Security & Compliance
+# Phase 06: Security Compliance
 
-## Overview
+## 📚 Documentation
 
-Learn to secure cloud infrastructure and applications, manage secrets, implement security policies, and ensure compliance with regulations.
+All learning content for this phase has been consolidated into the main documentation.
 
-## Learning Objectives
+**👉 Read the complete documentation:** [../docs/06-security-compliance.md](../docs/06-security-compliance.md)
 
-By the end of this phase, you should be able to:
-- Implement security best practices across cloud providers
-- Manage secrets securely
-- Set up security scanning and monitoring
-- Implement compliance policies
-- Understand and apply security frameworks
+## 📁 Directory Purpose
 
-## Structure
+This directory is for:
+- **Exercises**: Practical exercises and hands-on work
+- **Examples**: Code examples and configurations
+- **Notes**: Your personal notes and learnings
 
-- **[01-cloud-security](./01-cloud-security/)** - Security practices and tools
-- **[02-compliance-governance](./02-compliance-governance/)** - Compliance frameworks and governance
+## 🚀 Getting Started
 
-## Prerequisites
-
-- Phase 3: Cloud Platforms completed
-- Understanding of IAM across cloud providers
-- Basic security knowledge
-
-## Estimated Time
-
-- Cloud Security: 3-4 weeks
-- Compliance & Governance: 2-3 weeks
-
-**Total: 5-7 weeks**
-
-## Key Concepts
-
-- **Defense in Depth**: Multiple security layers
-- **Least Privilege**: Minimum necessary permissions
-- **Zero Trust**: Never trust, always verify
-- **Security Scanning**: Automated vulnerability detection
-- **Compliance**: Meeting regulatory requirements
+1. Read the consolidated documentation in `docs/06-security-compliance.md`
+2. Complete exercises in this directory
+3. Review examples in this directory
+4. Document your progress and notes here
 
 ---
 
-**Previous Phase:** [Phase 5: CI/CD & Automation](../05-ci-cd-automation/)  
-**Next Phase:** [Phase 7: Observability](../07-observability/)
-
+**Main Documentation:** [Phase 06: Security Compliance](../docs/06-security-compliance.md)

@@ -210,71 +210,64 @@ Later, replicate the same architecture using **European cloud alternatives** (OV
 
 ## 🏗️ Project Structure
 
-This repository is organized into 9 phases, each with detailed subdirectories and README files explaining what to learn:
+This repository uses a consolidated documentation structure for better readability and navigation:
 
 ```
 cloud_training/
-├── README.md (this file)
+├── README.md                    # Main overview & navigation (this file)
 │
-├── 01-foundations/
-│   ├── README.md
-│   ├── 01-system-administration/
-│   ├── 02-networking/
-│   └── 03-development-basics/
+├── docs/                        # 📚 Consolidated Documentation
+│   ├── 01-foundations.md        # All Phase 1 content (Linux, Networking, Development)
+│   ├── 02-infrastructure.md     # All Phase 2 content (Ansible, Terraform, Docker, K8s)
+│   ├── 03-cloud-platforms.md   # All Phase 3 content (AWS, GCP, Azure)
+│   ├── 04-multi-cloud-architecture.md
+│   ├── 05-ci-cd-automation.md
+│   ├── 06-security-compliance.md
+│   ├── 07-observability.md
+│   ├── 08-application-development.md
+│   └── 09-european-cloud-alternatives.md
 │
-├── 02-infrastructure/
-│   ├── README.md
-│   ├── 01-configuration-management/ (Ansible)
-│   ├── 02-infrastructure-provisioning/ (Terraform)
-│   └── 03-containerization/
-│       ├── docker/
-│       └── kubernetes/
+├── exercises/                   # 💻 Practical Exercises (organized by phase)
+│   └── (to be organized)
 │
-├── 03-cloud-platforms/
-│   ├── README.md
-│   ├── 01-aws/
-│   ├── 02-gcp/
-│   └── 03-azure/
+├── examples/                    # 📝 Code Examples
+│   └── (to be organized)
 │
-├── 04-multi-cloud-architecture/
-│   ├── README.md
-│   ├── 01-hybrid-cloud-concepts/
-│   ├── 02-multi-cloud-patterns/
-│   └── 03-networking/
+├── scripts/                     # 🔧 Utility Scripts
+│   └── consolidate_docs.py
 │
-├── 05-ci-cd-automation/
-│   ├── README.md
-│   ├── 01-pipelines/
-│   └── 02-automation-tools/
-│
-├── 06-security-compliance/
-│   ├── README.md
-│   ├── 01-cloud-security/
-│   └── 02-compliance-governance/
-│
-├── 07-observability/
-│   ├── README.md
-│   ├── 01-monitoring/
-│   ├── 02-logging/
-│   └── 03-tracing/
-│
-├── 08-application-development/
-│   ├── README.md
-│   ├── 01-cloud-native-design/
-│   └── 02-deployment/
-│
-└── 09-european-cloud-alternatives/
-    ├── README.md
-    ├── 01-providers/
-    └── 02-multi-cloud-european/
+└── 01-foundations/              # Directory structure for organizing exercises/examples
+    ├── 01-system-administration/
+    │   ├── exercises/           # Practical exercises
+    │   └── examples/            # Code examples
+    └── ...
 ```
 
-Each directory contains a README.md file with:
-- **Purpose**: What you'll learn
-- **Topics Covered**: Detailed breakdown
-- **Learning Resources**: Where to find information
-- **Practical Exercises**: Hands-on activities
-- **Notes**: Space to document your learnings
+### Documentation Structure
+
+**All learning content is consolidated in the `docs/` directory:**
+- One comprehensive file per phase
+- Easy to read, search, and navigate
+- Better for sharing and learning
+- All content in one place per topic
+
+**Directory structure is kept for:**
+- Organizing exercises and practical work
+- Storing code examples
+- Personal notes and progress tracking
+- Project-specific files
+
+### Quick Navigation
+
+- **[Phase 1: Foundations](./docs/01-foundations.md)** - Linux, Networking, Development Basics
+- **[Phase 2: Infrastructure](./docs/02-infrastructure.md)** - Ansible, Terraform, Docker, Kubernetes
+- **[Phase 3: Cloud Platforms](./docs/03-cloud-platforms.md)** - AWS, GCP, Azure
+- **[Phase 4: Multi-Cloud Architecture](./docs/04-multi-cloud-architecture.md)**
+- **[Phase 5: CI/CD & Automation](./docs/05-ci-cd-automation.md)**
+- **[Phase 6: Security & Compliance](./docs/06-security-compliance.md)**
+- **[Phase 7: Observability](./docs/07-observability.md)**
+- **[Phase 8: Application Development](./docs/08-application-development.md)**
+- **[Phase 9: European Cloud Alternatives](./docs/09-european-cloud-alternatives.md)**
 
 ---
 
@@ -341,12 +334,14 @@ Each directory contains a README.md file with:
 
 ### How to Use This Repository
 
-1. **Navigate to a Phase**: Start with `01-foundations/README.md`
-2. **Read the Phase Overview**: Understand what you'll learn
-3. **Explore Subdirectories**: Each has detailed README files
-4. **Complete Exercises**: Practice what you learn
-5. **Document Progress**: Add notes, code examples, and learnings
-6. **Track Your Progress**: Use the checkboxes in each README
+1. **Start with Documentation**: Read the consolidated docs in `docs/` directory
+   - Begin with [Phase 1: Foundations](./docs/01-foundations.md)
+   - Each phase has one comprehensive file with all topics
+2. **Follow the Learning Path**: Work through phases sequentially
+3. **Complete Exercises**: Use the `exercises/` directory for practical work
+4. **Review Examples**: Check `examples/` for code samples
+5. **Document Progress**: Add your notes and learnings in the phase directories
+6. **Track Your Progress**: Use the checkboxes in the main README
 
 ---
 

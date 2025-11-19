@@ -1,48 +1,25 @@
-# Phase 7: Observability
+# Phase 07: Observability
 
-## Overview
+## 📚 Documentation
 
-Learn to monitor, log, and trace applications and infrastructure across multiple cloud environments. Understand how to gain visibility into system behavior and performance.
+All learning content for this phase has been consolidated into the main documentation.
 
-## Learning Objectives
+**👉 Read the complete documentation:** [../docs/07-observability.md](../docs/07-observability.md)
 
-By the end of this phase, you should be able to:
-- Set up comprehensive monitoring across clouds
-- Aggregate and analyze logs from multiple sources
-- Implement distributed tracing
-- Create effective alerting strategies
-- Troubleshoot issues using observability data
+## 📁 Directory Purpose
 
-## Structure
+This directory is for:
+- **Exercises**: Practical exercises and hands-on work
+- **Examples**: Code examples and configurations
+- **Notes**: Your personal notes and learnings
 
-- **[01-monitoring](./01-monitoring/)** - Metrics collection and monitoring
-- **[02-logging](./02-logging/)** - Centralized logging
-- **[03-tracing](./03-tracing/)** - Distributed tracing
+## 🚀 Getting Started
 
-## Prerequisites
-
-- Phase 3: Cloud Platforms completed
-- Applications deployed to cloud
-- Understanding of system metrics and logs
-
-## Estimated Time
-
-- Monitoring: 2-3 weeks
-- Logging: 2-3 weeks
-- Tracing: 1-2 weeks
-
-**Total: 5-8 weeks**
-
-## Key Concepts
-
-- **Three Pillars of Observability**: Metrics, Logs, Traces
-- **Monitoring**: Real-time system health
-- **Logging**: Event records
-- **Tracing**: Request flow across services
-- **Alerting**: Notifications on anomalies
+1. Read the consolidated documentation in `docs/07-observability.md`
+2. Complete exercises in this directory
+3. Review examples in this directory
+4. Document your progress and notes here
 
 ---
 
-**Previous Phase:** [Phase 6: Security & Compliance](../06-security-compliance/)  
-**Next Phase:** [Phase 8: Application Development](../08-application-development/)
-
+**Main Documentation:** [Phase 07: Observability](../docs/07-observability.md)
