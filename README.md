@@ -315,7 +315,11 @@ cloud_training/
 
 ### Setup Requirements
 1. **Local Development Environment**
-   - Linux system (or WSL2 on Windows)
+   - **Virtual Machine (Recommended)** - Safe learning environment
+     - See: [Virtual Machine Setup Guide](./SETUP_GUIDE.md)
+     - VirtualBox (macOS/Linux)
+     - Ubuntu Server 22.04 LTS recommended
+   - **OR** Linux system (if you're comfortable)
    - Git installed
    - Text editor or IDE
 
@@ -334,14 +338,18 @@ cloud_training/
 
 ### How to Use This Repository
 
-1. **Start with Documentation**: Read the consolidated docs in `docs/` directory
+1. **Set Up Your Environment** (First Time Only)
+   - Follow: [Virtual Machine Setup Guide](./SETUP_GUIDE.md)
+   - Create a VM with Ubuntu Server 22.04 LTS
+   - Create your first snapshot
+2. **Start with Documentation**: Read the consolidated docs in `docs/` directory
    - Begin with [Phase 1: Foundations](./docs/01-foundations.md)
    - Each phase has one comprehensive file with all topics
-2. **Follow the Learning Path**: Work through phases sequentially
-3. **Complete Exercises**: Use the `exercises/` directory for practical work
-4. **Review Examples**: Check `examples/` for code samples
-5. **Document Progress**: Add your notes and learnings in the phase directories
-6. **Track Your Progress**: Use the checkboxes in the main README
+3. **Follow the Learning Path**: Work through phases sequentially
+4. **Complete Exercises**: Use the `exercises/` directory for practical work
+5. **Review Examples**: Check `examples/` for code samples
+6. **Document Progress**: Add your notes and learnings in the phase directories
+7. **Track Your Progress**: Use the checkboxes in the main README
 
 ---
 

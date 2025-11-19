@@ -108,7 +108,12 @@ By the end of this phase, you should be able to:
 ## Prerequisites
 
 - Basic computer literacy
-- Access to a Linux system (physical or virtual)
+- **Virtual Machine Setup** (recommended for safety)
+  - See: [Virtual Machine Setup Guide](../../SETUP_GUIDE.md)
+  - VirtualBox installed on macOS or Linux
+  - Ubuntu Server 22.04 LTS VM created
+  - First snapshot created
+- **OR** Access to a Linux system (if you're comfortable)
 
 ## Estimated Time
 
@@ -120,12 +125,15 @@ By the end of this phase, you should be able to:
 
 ## How to Use This Phase
 
-1. Review each subdirectory's README
-2. **Complete the exercises**: [Exercises Directory](../../exercises/01-foundations/)
-3. **Review code examples**: [Examples Directory](../../examples/01-foundations/)
-4. Document your learnings and notes
-5. Test your knowledge with practical exercises
-6. Move to the next phase only when comfortable with the concepts
+1. **Set up your environment** (if not done yet)
+   - Follow: [Virtual Machine Setup Guide](../../SETUP_GUIDE.md)
+   - Create your first snapshot before starting
+2. Review each subdirectory's README
+3. **Complete the exercises**: [Exercises Directory](../../exercises/01-foundations/)
+4. **Review code examples**: [Examples Directory](../../examples/01-foundations/)
+5. Document your learnings and notes
+6. Test your knowledge with practical exercises
+7. Move to the next phase only when comfortable with the concepts
 
 ---
 

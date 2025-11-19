@@ -1,5 +1,29 @@
 # Phase 1: Foundations - Exercises
 
+## 🚀 Setup Your Environment First!
+
+**Before starting exercises, set up a safe learning environment!**
+
+👉 **Complete Setup Guide**: [../../SETUP_GUIDE.md](../../SETUP_GUIDE.md)
+
+**Quick Summary:**
+1. Install VirtualBox (works on macOS and Linux)
+2. Download Ubuntu Server 22.04 LTS ISO
+3. Create a VM with 2GB RAM and 20GB disk
+4. Install Ubuntu Server
+5. **Create a snapshot** before starting exercises
+6. You're ready to learn safely!
+
+**Why use a VM?**
+- ✅ Experiment without breaking your system
+- ✅ Use snapshots to restore if something goes wrong
+- ✅ Perfect isolation for learning Linux
+- ✅ Easy to reset and start fresh
+
+**Important**: Always create a snapshot before starting exercises. This allows you to restore if something goes wrong.
+
+---
+
 This directory contains practical exercises for the Foundations phase.
 
 ## Structure
