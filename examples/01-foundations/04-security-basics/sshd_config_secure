@@ -1,0 +1,49 @@
+# Secure SSH Server Configuration
+# Location: /etc/ssh/sshd_config
+# Backup original before applying: sudo cp /etc/ssh/sshd_config /etc/ssh/sshd_config.backup
+
+# Change default port (optional but recommended)
+Port 2222
+
+# Disable root login
+PermitRootLogin no
+
+# Disable password authentication (use keys only)
+PasswordAuthentication no
+PubkeyAuthentication yes
+
+# Limit authentication attempts
+MaxAuthTries 3
+MaxStartups 3:50:10
+
+# Connection settings
+ClientAliveInterval 300
+ClientAliveCountMax 2
+TCPKeepAlive yes
+
+# Security settings
+Protocol 2
+PermitEmptyPasswords no
+X11Forwarding no
+AllowTcpForwarding no
+
+# Restrict users (optional)
+# AllowUsers user1 user2
+# DenyUsers baduser
+
+# Restrict groups (optional)
+# AllowGroups developers
+# DenyGroups guests
+
+# Key settings
+AuthorizedKeysFile .ssh/authorized_keys
+StrictModes yes
+
+# Logging
+SyslogFacility AUTH
+LogLevel INFO
+
+# After making changes:
+# sudo sshd -t  # Test configuration
+# sudo systemctl reload sshd  # Reload service
+
