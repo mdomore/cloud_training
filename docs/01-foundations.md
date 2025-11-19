@@ -101,9 +101,10 @@ By the end of this phase, you should be able to:
 
 ## Structure
 
-- **[01-system-administration](./01-system-administration/)** - Linux fundamentals, system management, security
-- **[02-networking](./02-networking/)** - Network protocols, DNS, routing, security
-- **[03-development-basics](./03-development-basics/)** - Git, programming basics, API development
+This phase covers three main areas:
+- **System Administration** - Linux fundamentals, system management, security
+- **Networking** - Network protocols, DNS, routing, security
+- **Development Basics** - Git, programming basics, API development
 
 ## Prerequisites
 
@@ -128,7 +129,7 @@ By the end of this phase, you should be able to:
 1. **Set up your environment** (if not done yet)
    - Follow: [Virtual Machine Setup Guide](../../SETUP_GUIDE.md)
    - Create your first snapshot before starting
-2. Review each subdirectory's README
+2. **Read through the documentation** in this file
 3. **Complete the exercises**: [Exercises Directory](../../exercises/01-foundations/)
 4. **Review code examples**: [Examples Directory](../../examples/01-foundations/)
 5. Document your learnings and notes
@@ -151,12 +152,12 @@ Master Linux system administration fundamentals. This knowledge is crucial for m
 
 ## Structure
 
-This section is organized into 4 main topics, each with detailed learning paths:
+This section is organized into 4 main topics:
 
-- **[01-linux-fundamentals](./01-linux-fundamentals/)** - File system, users, permissions, processes, systemd
-- **[02-shell-scripting](./02-shell-scripting/)** - Bash/Zsh scripting, automation, best practices
-- **[03-system-configuration](./03-system-configuration/)** - Network, packages, services, logs
-- **[04-security-basics](./04-security-basics/)** - SSH, firewalls, access control, file security
+- **Linux Fundamentals** - File system, users, permissions, processes, systemd
+- **Shell Scripting** - Bash/Zsh scripting, automation, best practices
+- **System Configuration** - Network, packages, services, logs
+- **Security Basics** - SSH, firewalls, access control, file security
 
 ## Topics Covered
 
@@ -191,7 +192,7 @@ This section is organized into 4 main topics, each with detailed learning paths:
 3. **Master System Configuration** - Configure and manage systems
 4. **Secure Your Systems** - Implement security best practices
 
-Each subdirectory contains:
+This documentation contains:
 - Detailed learning objectives
 - Topics to cover with explanations
 - Learning resources
@@ -203,7 +204,7 @@ Each subdirectory contains:
 - Linux command-line tutorials
 - System administration guides
 - Shell scripting tutorials
-- Each subdirectory has specific resources
+- Each section has specific resources
 
 ## Practical Exercises
 
@@ -220,7 +221,7 @@ Each topic has specific exercises. Overall goals:
 
 ## Notes
 
-Each subdirectory has a Notes section for documenting your learnings. Include:
+Use the Notes sections throughout this documentation for documenting your learnings. Include:
 - Useful commands and their explanations
 - Configuration examples
 - Troubleshooting scenarios

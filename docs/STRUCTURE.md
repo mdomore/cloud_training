@@ -40,7 +40,7 @@ The phase directories (`01-foundations/`, `02-infrastructure/`, etc.) are mainta
 - Personal notes and progress tracking
 - Project-specific files
 
-Each subdirectory has a minimal README that points to the consolidated documentation.
+Phase directories are maintained for organizing exercises and examples, with minimal README files pointing to the consolidated documentation.
 
 ## 🎯 Benefits
 

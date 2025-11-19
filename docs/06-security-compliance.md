@@ -45,8 +45,9 @@ By the end of this phase, you should be able to:
 
 ## Structure
 
-- **[01-cloud-security](./01-cloud-security/)** - Security practices and tools
-- **[02-compliance-governance](./02-compliance-governance/)** - Compliance frameworks and governance
+This phase covers two main areas:
+- **Cloud Security** - Security practices and tools
+- **Compliance & Governance** - Compliance frameworks and governance
 
 ## Prerequisites
 
@@ -153,7 +154,7 @@ Document your learnings:
 
 ---
 
-**Next:** [Compliance & Governance](../02-compliance-governance/)
+**Next Section:** Compliance & Governance
 
 ---
 

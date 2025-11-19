@@ -46,8 +46,9 @@ By the end of this phase, you should be able to:
 
 ## Structure
 
-- **[01-pipelines](./01-pipelines/)** - CI/CD pipeline setup and configuration
-- **[02-automation-tools](./02-automation-tools/)** - Infrastructure and deployment automation
+This phase covers two main areas:
+- **CI/CD Pipelines** - Pipeline setup and configuration
+- **Automation Tools** - Infrastructure and deployment automation
 
 ## Prerequisites
 
@@ -147,7 +148,7 @@ Document your learnings:
 
 ---
 
-**Next:** [Automation Tools](../02-automation-tools/)
+**Next Section:** Automation Tools
 
 ---
 

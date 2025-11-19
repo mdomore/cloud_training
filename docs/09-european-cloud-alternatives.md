@@ -43,8 +43,9 @@ By the end of this phase, you should be able to:
 
 ## Structure
 
-- **[01-providers](./01-providers/)** - Individual European cloud providers
-- **[02-multi-cloud-european](./02-multi-cloud-european/)** - Multi-cloud with European providers
+This phase covers two main areas:
+- **European Cloud Providers** - Individual European cloud providers (OVH, Scaleway, Outscale)
+- **Multi-Cloud with European Providers** - Multi-cloud strategies with European clouds
 
 ## Prerequisites
 
@@ -148,7 +149,7 @@ Document your learnings:
 
 ---
 
-**Next:** [Multi-Cloud with European Providers](../02-multi-cloud-european/)
+**Next Section:** Multi-Cloud with European Providers
 
 ---
 

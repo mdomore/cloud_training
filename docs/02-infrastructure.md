@@ -66,9 +66,10 @@ By the end of this phase, you should be able to:
 
 ## Structure
 
-- **[01-configuration-management](./01-configuration-management/)** - Ansible for automated configuration
-- **[02-infrastructure-provisioning](./02-infrastructure-provisioning/)** - Terraform/OpenTofu for infrastructure provisioning
-- **[03-containerization](./03-containerization/)** - Docker and Kubernetes
+This phase covers three main areas:
+- **Configuration Management** - Ansible for automated configuration
+- **Infrastructure Provisioning** - Terraform/OpenTofu for infrastructure provisioning
+- **Containerization** - Docker and Kubernetes
 
 ## Prerequisites
 
@@ -314,7 +315,7 @@ Document your learnings:
 
 ---
 
-**Next:** [Kubernetes](../kubernetes/)
+**Next Section:** Kubernetes
 
 ---
 

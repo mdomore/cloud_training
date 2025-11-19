@@ -53,9 +53,10 @@ By the end of this phase, you should be able to:
 
 ## Structure
 
-- **[01-aws](./01-aws/)** - Amazon Web Services
-- **[02-gcp](./02-gcp/)** - Google Cloud Platform
-- **[03-azure](./03-azure/)** - Microsoft Azure
+This phase covers three major cloud providers:
+- **AWS** - Amazon Web Services
+- **GCP** - Google Cloud Platform
+- **Azure** - Microsoft Azure
 
 ## Prerequisites
 
@@ -174,7 +175,7 @@ Document your learnings:
 
 ---
 
-**Next:** [GCP](../02-gcp/)
+**Next Section:** GCP
 
 ---
 
@@ -255,7 +256,7 @@ Document your learnings:
 
 ---
 
-**Next:** [Azure](../03-azure/)
+**Next Section:** Azure
 
 ---
 

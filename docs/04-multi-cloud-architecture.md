@@ -50,9 +50,10 @@ By the end of this phase, you should be able to:
 
 ## Structure
 
-- **[01-hybrid-cloud-concepts](./01-hybrid-cloud-concepts/)** - Understanding hybrid cloud connectivity and concepts
-- **[02-multi-cloud-patterns](./02-multi-cloud-patterns/)** - Deployment patterns and strategies
-- **[03-networking](./03-networking/)** - Networking across cloud providers
+This phase covers three main areas:
+- **Hybrid Cloud Concepts** - Understanding hybrid cloud connectivity and concepts
+- **Multi-Cloud Patterns** - Deployment patterns and strategies
+- **Networking** - Networking across cloud providers
 
 ## Prerequisites
 

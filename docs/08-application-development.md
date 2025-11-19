@@ -44,8 +44,9 @@ By the end of this phase, you should be able to:
 
 ## Structure
 
-- **[01-cloud-native-design](./01-cloud-native-design/)** - Application architecture and design principles
-- **[02-deployment](./02-deployment/)** - Application deployment patterns and tools
+This phase covers two main areas:
+- **Cloud-Native Design** - Application architecture and design principles
+- **Deployment** - Application deployment patterns and tools
 
 ## Prerequisites
 
@@ -154,7 +155,7 @@ Document your learnings:
 
 ---
 
-**Next:** [Deployment](../02-deployment/)
+**Next Section:** Deployment
 
 ---
 

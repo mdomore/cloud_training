@@ -56,9 +56,10 @@ By the end of this phase, you should be able to:
 
 ## Structure
 
-- **[01-monitoring](./01-monitoring/)** - Metrics collection and monitoring
-- **[02-logging](./02-logging/)** - Centralized logging
-- **[03-tracing](./03-tracing/)** - Distributed tracing
+This phase covers three main areas:
+- **Monitoring** - Metrics collection and monitoring
+- **Logging** - Centralized logging
+- **Tracing** - Distributed tracing
 
 ## Prerequisites
 
@@ -155,7 +156,7 @@ Document your learnings:
 
 ---
 
-**Next:** [Logging](../02-logging/)
+**Next Section:** Logging
 
 ---
 
@@ -223,7 +224,7 @@ Document your learnings:
 
 ---
 
-**Next:** [Tracing](../03-tracing/)
+**Next Section:** Tracing
 
 ---
 
