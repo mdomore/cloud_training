@@ -7,7 +7,9 @@ Build and deploy a production-ready application on a **hybrid multicloud infrast
 - **GCP** (Google Cloud Platform)
 - **Azure** (Microsoft Azure)
 
-Later, replicate the same architecture using **European cloud alternatives** (OVH, Scaleway, Outscale, etc.)
+Later, replicate the same architecture using:
+- **European cloud alternatives** (OVH, Scaleway, Outscale, etc.)
+- **On-premise cloud infrastructure** (OpenStack, Proxmox, etc.) using open source tools
 
 ---
 
@@ -41,25 +43,25 @@ Later, replicate the same architecture using **European cloud alternatives** (OV
 ### Phase 2: Infrastructure as Code (IaC)
 
 #### 2.1 Configuration Management
-- [ ] **Ansible**
+- [ ] **Ansible** (Open Source)
   - Playbooks, roles, inventories
   - Idempotency
   - Templates and variables
 
 #### 2.2 Infrastructure Provisioning
-- [ ] **Terraform** / **OpenTofu**
-  - Providers (AWS, GCP, Azure)
+- [ ] **Terraform** / **OpenTofu** (Open Source)
+  - Providers (AWS, GCP, Azure, OpenStack, Proxmox)
   - State management
   - Modules and workspaces
   - Multi-cloud strategies
 
 #### 2.3 Containerization
-- [ ] **Docker**
+- [ ] **Docker** (Open Source)
   - Images, containers, Dockerfile
   - Docker Compose
   - Image registries
 
-- [ ] **Kubernetes**
+- [ ] **Kubernetes** (Open Source)
   - Pods, Services, Deployments
   - ConfigMaps, Secrets
   - Ingress, Service Mesh
@@ -121,10 +123,12 @@ Later, replicate the same architecture using **European cloud alternatives** (OV
 ### Phase 5: CI/CD & Automation
 
 #### 5.1 CI/CD Pipelines
-- [ ] **GitLab CI/CD** or **GitHub Actions**
+- [ ] **GitLab CI/CD** (Open Source) or **GitHub Actions**
   - Pipeline stages
   - Multi-environment deployments
   - Multi-cloud deployment strategies
+- [ ] **Jenkins** (Open Source) - Alternative CI/CD platform
+- [ ] **Tekton** (Open Source) - Kubernetes-native CI/CD
 
 #### 5.2 Automation Tools
 - [ ] Infrastructure automation
@@ -137,10 +141,10 @@ Later, replicate the same architecture using **European cloud alternatives** (OV
 
 #### 6.1 Cloud Security
 - [ ] Identity and Access Management (IAM)
-- [ ] Secrets management (Vault, AWS Secrets Manager, etc.)
+- [ ] Secrets management (HashiCorp Vault - Open Source, AWS Secrets Manager, etc.)
 - [ ] Network security
 - [ ] Data encryption (at rest, in transit)
-- [ ] Security scanning (Trivy, Clair)
+- [ ] Security scanning (Trivy - Open Source, Clair - Open Source)
 
 #### 6.2 Compliance & Governance
 - [ ] Policy as Code (OPA, Sentinel)
@@ -153,16 +157,16 @@ Later, replicate the same architecture using **European cloud alternatives** (OV
 ### Phase 7: Observability
 
 #### 7.1 Monitoring
-- [ ] Metrics collection (Prometheus, CloudWatch, etc.)
+- [ ] Metrics collection (Prometheus - Open Source, CloudWatch, etc.)
 - [ ] Alerting strategies
 - [ ] Multi-cloud monitoring solutions
 
 #### 7.2 Logging
-- [ ] Centralized logging (ELK, Loki, Cloud Logging)
+- [ ] Centralized logging (ELK Stack - Open Source, Loki - Open Source, Cloud Logging)
 - [ ] Log aggregation across clouds
 
 #### 7.3 Tracing
-- [ ] Distributed tracing (Jaeger, Zipkin)
+- [ ] Distributed tracing (Jaeger - Open Source, Zipkin - Open Source, Tempo)
 - [ ] Application performance monitoring (APM)
 
 ---
@@ -176,9 +180,9 @@ Later, replicate the same architecture using **European cloud alternatives** (OV
 - [ ] API design and versioning
 
 #### 8.2 Application Deployment
-- [ ] Container orchestration
-- [ ] Service mesh (Istio, Linkerd)
-- [ ] API gateways
+- [ ] Container orchestration (Kubernetes - Open Source)
+- [ ] Service mesh (Istio - Open Source, Linkerd - Open Source)
+- [ ] API gateways (Kong - Open Source, Traefik - Open Source)
 
 ---
 
@@ -208,6 +212,64 @@ Later, replicate the same architecture using **European cloud alternatives** (OV
 
 ---
 
+### Phase 10: On-Premise Cloud Infrastructure
+
+#### 10.1 Open Source Cloud Platforms
+- [ ] **OpenStack**
+  - Architecture and components (Nova, Neutron, Cinder, Glance, Keystone)
+  - Installation and deployment (DevStack, Kolla, Packstack)
+  - Terraform provider for OpenStack
+  - Networking (Neutron, floating IPs, security groups)
+  - Storage (Cinder volumes, Swift object storage)
+  - Identity management (Keystone)
+  - Orchestration (Heat)
+
+- [ ] **Proxmox VE**
+  - Virtualization platform overview
+  - Installation and cluster setup
+  - VM and container management
+  - Storage management (local, Ceph, ZFS)
+  - Networking configuration
+  - Backup and replication
+  - High availability
+
+- [ ] **Other Open Source Alternatives**
+  - **CloudStack** - Apache CloudStack
+  - **oVirt** - Virtualization management
+  - **KVM/QEMU** - Direct virtualization
+  - **LXD/LXC** - Container management
+
+#### 10.2 On-Premise Cloud Architecture
+- [ ] Design on-premise cloud infrastructure
+- [ ] Network architecture for private cloud
+- [ ] Storage architecture (Ceph, GlusterFS, MinIO)
+- [ ] High availability and redundancy
+- [ ] Resource management and quotas
+- [ ] Multi-tenancy and isolation
+
+#### 10.3 Hybrid Cloud with On-Premise
+- [ ] Connect on-premise cloud to public clouds
+- [ ] Hybrid networking (VPN, Direct Connect alternatives)
+- [ ] Data synchronization strategies
+- [ ] Workload placement decisions
+- [ ] Cost optimization (on-premise vs cloud)
+- [ ] Disaster recovery with hybrid setup
+
+#### 10.4 Open Source Tool Ecosystem
+- [ ] **Infrastructure**: Terraform, Ansible, Pulumi
+- [ ] **Containers**: Docker, Podman, containerd
+- [ ] **Orchestration**: Kubernetes, Nomad
+- [ ] **CI/CD**: GitLab CI, Jenkins, Tekton
+- [ ] **Monitoring**: Prometheus, Grafana, VictoriaMetrics
+- [ ] **Logging**: ELK Stack, Loki, Vector
+- [ ] **Tracing**: Jaeger, Tempo, OpenTelemetry
+- [ ] **Service Mesh**: Istio, Linkerd, Consul
+- [ ] **API Gateway**: Kong, Traefik, Envoy
+- [ ] **Secrets**: HashiCorp Vault, Sealed Secrets
+- [ ] **Storage**: Ceph, MinIO, Longhorn
+
+---
+
 ## 🏗️ Project Structure
 
 This repository uses a consolidated documentation structure for better readability and navigation:
@@ -225,7 +287,8 @@ cloud_training/
 │   ├── 06-security-compliance.md
 │   ├── 07-observability.md
 │   ├── 08-application-development.md
-│   └── 09-european-cloud-alternatives.md
+│   ├── 09-european-cloud-alternatives.md
+│   └── 10-on-premise-cloud.md
 │
 ├── exercises/                   # 💻 Practical Exercises (organized by phase)
 │   └── (to be organized)
@@ -268,6 +331,7 @@ cloud_training/
 - **[Phase 7: Observability](./docs/07-observability.md)**
 - **[Phase 8: Application Development](./docs/08-application-development.md)**
 - **[Phase 9: European Cloud Alternatives](./docs/09-european-cloud-alternatives.md)**
+- **[Phase 10: On-Premise Cloud Infrastructure](./docs/10-on-premise-cloud.md)** - OpenStack, Proxmox, Open Source Cloud
 
 ---
 
@@ -279,9 +343,11 @@ cloud_training/
 
 ### Additional Resources
 - Cloud provider official documentation
-- Terraform documentation
+- Terraform/OpenTofu documentation
 - Kubernetes documentation
-- CNCF landscape
+- CNCF landscape (open source cloud tools)
+- OpenStack documentation
+- Proxmox documentation
 
 ---
 
@@ -296,6 +362,7 @@ cloud_training/
 - [ ] Phase 7: Observability
 - [ ] Phase 8: Application Development
 - [ ] Phase 9: European Cloud Alternatives
+- [ ] Phase 10: On-Premise Cloud Infrastructure
 
 ---
 

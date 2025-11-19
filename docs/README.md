@@ -15,6 +15,7 @@ All learning content has been consolidated into phase-level documentation files 
 - **[Phase 7: Observability](./07-observability.md)** - Monitoring, Logging, Tracing
 - **[Phase 8: Application Development](./08-application-development.md)** - Cloud-Native Design, Deployment
 - **[Phase 9: European Cloud Alternatives](./09-european-cloud-alternatives.md)** - OVH, Scaleway, Outscale
+- **[Phase 10: On-Premise Cloud Infrastructure](./10-on-premise-cloud.md)** - OpenStack, Proxmox, Open Source Cloud
 
 ## 📖 How to Use
 
