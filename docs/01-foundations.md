@@ -121,10 +121,11 @@ By the end of this phase, you should be able to:
 ## How to Use This Phase
 
 1. Review each subdirectory's README
-2. Complete the exercises and examples
-3. Document your learnings and notes
-4. Test your knowledge with practical exercises
-5. Move to the next phase only when comfortable with the concepts
+2. **Complete the exercises**: [Exercises Directory](../../exercises/01-foundations/)
+3. **Review code examples**: [Examples Directory](../../examples/01-foundations/)
+4. Document your learnings and notes
+5. Test your knowledge with practical exercises
+6. Move to the next phase only when comfortable with the concepts
 
 ---
 
@@ -198,12 +199,16 @@ Each subdirectory contains:
 
 ## Practical Exercises
 
+**📝 Complete exercises in:** [exercises/01-foundations/](../../exercises/01-foundations/)
+
 Each topic has specific exercises. Overall goals:
 1. Set up a Linux server from scratch
 2. Configure network interfaces
 3. Create and manage users/groups
 4. Write automation scripts
 5. Secure a Linux system
+
+**💡 Reference examples in:** [examples/01-foundations/](../../examples/01-foundations/)
 
 ## Notes
 
@@ -1726,6 +1731,9 @@ sudo systemctl isolate multi-user.target
 ---
 
 ## Practical Exercises
+
+**📝 Complete exercises in:** [exercises/01-foundations/01-linux-fundamentals/](../../../exercises/01-foundations/01-linux-fundamentals/)  
+**💡 Reference examples in:** [examples/01-foundations/01-linux-fundamentals/](../../../examples/01-foundations/01-linux-fundamentals/)
 
 ### Exercise 1: File System Navigation
 ```bash
@@ -3811,6 +3819,8 @@ bg %1
 
 ## Complete Script Examples
 
+**💡 See working examples in:** [examples/01-foundations/02-shell-scripting/](../../../examples/01-foundations/02-shell-scripting/)
+
 ### Example 1: System Information Script
 ```bash
 #!/bin/bash
@@ -4071,6 +4081,9 @@ By the end of this section, you should be able to:
 - Log management best practices
 
 ## Practical Exercises
+
+**📝 Complete exercises in:** [exercises/01-foundations/03-system-configuration/](../../../exercises/01-foundations/03-system-configuration/)  
+**💡 Reference examples in:** [examples/01-foundations/03-system-configuration/](../../../examples/01-foundations/03-system-configuration/)
 
 1. **Network Configuration**
    - Configure a static IP address
@@ -4679,6 +4692,9 @@ By the end of this section, you should be able to:
 
 ## Practical Exercises
 
+**📝 Complete exercises in:** [exercises/01-foundations/04-security-basics/](../../../exercises/01-foundations/04-security-basics/)  
+**💡 Reference examples in:** [examples/01-foundations/04-security-basics/](../../../examples/01-foundations/04-security-basics/)
+
 1. **SSH Hardening**
    - Generate SSH key pairs
    - Configure key-based authentication
@@ -5265,6 +5281,9 @@ Understand network protocols, configurations, and concepts essential for cloud i
 
 ## Practical Exercises
 
+**📝 Complete exercises in:** [exercises/01-foundations/05-networking/](../../../exercises/01-foundations/05-networking/)  
+**💡 Reference examples in:** [examples/01-foundations/05-networking/](../../../examples/01-foundations/05-networking/)
+
 1. Analyze network traffic with tcpdump/wireshark
 2. Configure DNS resolution
 3. Understand subnet calculations
@@ -5321,6 +5340,9 @@ Choose one primary language (recommendations):
 - API design guides
 
 ## Practical Exercises
+
+**📝 Complete exercises in:** [exercises/01-foundations/06-development-basics/](../../../exercises/01-foundations/06-development-basics/)  
+**💡 Reference examples in:** [examples/01-foundations/06-development-basics/](../../../examples/01-foundations/06-development-basics/)
 
 1. Set up a Git repository
 2. Create a simple application in your chosen language
