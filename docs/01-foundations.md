@@ -1191,6 +1191,68 @@ kill %1    # Sends TERM signal
 kill -9 %1 # Force kill
 ```
 
+**Complete cycle: Background → Foreground → Background again**
+
+Yes! You can move a job between background and foreground multiple times. Here's the complete workflow:
+
+```bash
+# Step 1: Start a process in background
+sleep 60 &
+# Output: [1] 12345
+# Your terminal is immediately available
+
+# Step 2: Check it's running in background
+jobs
+# [1]+  Running    sleep 60 &
+
+# Step 3: Bring it to foreground (to interact with it or see output)
+fg %1
+# or just: fg
+# Now the process is in foreground, you can see it running
+
+# Step 4: Suspend it (while in foreground)
+# Press Ctrl+Z
+# Output: [1]+  Stopped    sleep 60
+# The process is now suspended (stopped)
+
+# Step 5: Put it back in background
+bg %1
+# or just: bg
+# Output: [1]+ sleep 60 &
+# The process is now running in background again
+
+# Step 6: You can repeat this cycle as many times as needed
+fg %1      # Bring to foreground again
+# Press Ctrl+Z to suspend
+bg %1      # Put back in background
+```
+
+**Practical example - Monitoring a long-running task:**
+```bash
+# Start a backup script in background
+./backup.sh &
+# [1] 12345
+
+# Do other work
+ls -la
+vim config.txt
+
+# Check on the backup progress - bring to foreground
+fg %1
+# See the output scrolling, monitor progress
+
+# Suspend it to get terminal back
+# Press Ctrl+Z
+# [1]+  Stopped    ./backup.sh
+
+# Put it back in background to continue
+bg %1
+# [1]+ ./backup.sh &
+
+# Continue with other work
+# Repeat fg/bg cycle as needed to check progress
+```
+
 **Complete workflow example:**
 ```bash
 # Scenario: You want to compile a large program, but also need to use your terminal
