@@ -30,7 +30,7 @@ All learning content is in the `docs/` directory:
 - **`06-security-compliance.md`** - Complete Phase 6 content
 - **`07-observability.md`** - Complete Phase 7 content
 - **`08-application-development.md`** - Complete Phase 8 content
-- **`09-european-cloud-alternatives.md`** - Complete Phase 9 content
+- **`09-mlops.md`** - Complete Phase 9 content
 
 ### Directory Structure (for exercises/examples)
 

@@ -186,29 +186,52 @@ Later, replicate the same architecture using:
 
 ---
 
-### Phase 9: European Cloud Alternatives
+### Phase 9: MLOps
 
-#### 9.1 European Cloud Providers
-- [ ] **OVHcloud**
-  - Services overview
-  - Terraform provider
-  - Integration patterns
+#### 9.1 Machine Learning Fundamentals
+- [ ] ML workflow and lifecycle
+- [ ] Data management and versioning
+- [ ] Experiment tracking
+- [ ] Model development and versioning
 
-- [ ] **Scaleway**
-  - Services overview
-  - Terraform provider
-  - Integration patterns
+#### 9.2 ML Infrastructure & Platforms
+- [ ] **AWS SageMaker**
+  - SageMaker Studio, Training, Endpoints
+  - SageMaker Pipelines, Feature Store
+  - Model Registry, Experiments
 
-- [ ] **Outscale**
-  - Services overview
-  - Terraform provider
-  - Integration patterns
+- [ ] **Google Vertex AI**
+  - Vertex AI Workbench, Training
+  - Vertex AI Prediction, Pipelines
+  - Feature Store, Model Registry
 
-#### 9.2 Multi-Cloud with European Providers
-- [ ] Replicate architecture on European clouds
-- [ ] Hybrid scenarios (US clouds + European clouds)
-- [ ] Data sovereignty considerations
-- [ ] Compliance (GDPR, localization)
+- [ ] **Azure Machine Learning**
+  - Azure ML Studio, Compute
+  - ML Endpoints, Pipelines
+  - Datastores, Model Registry
+
+- [ ] **Kubeflow**
+  - Kubernetes-native ML platform
+  - Kubeflow Pipelines
+  - KServe for model serving
+
+#### 9.3 ML Pipelines & Automation
+- [ ] Pipeline orchestration (Airflow, Kubeflow Pipelines, Prefect)
+- [ ] CI/CD for ML
+- [ ] Automated ML workflows
+- [ ] Multi-cloud ML pipelines
+
+#### 9.4 Model Deployment & Serving
+- [ ] Deployment patterns (real-time, batch, edge)
+- [ ] Model serving frameworks (TensorFlow Serving, TorchServe, KServe)
+- [ ] Model optimization (quantization, pruning)
+- [ ] Deployment strategies (canary, blue/green)
+
+#### 9.5 ML Observability & Monitoring
+- [ ] Model monitoring (drift detection, performance tracking)
+- [ ] Data quality monitoring
+- [ ] Automated retraining
+- [ ] Model explainability
 
 ---
 
@@ -287,7 +310,7 @@ cloud_training/
 │   ├── 06-security-compliance.md
 │   ├── 07-observability.md
 │   ├── 08-application-development.md
-│   ├── 09-european-cloud-alternatives.md
+│   ├── 09-mlops.md
 │   └── 10-on-premise-cloud.md
 │
 ├── exercises/                   # 💻 Practical Exercises (organized by phase)
@@ -330,7 +353,7 @@ cloud_training/
 - **[Phase 6: Security & Compliance](./docs/06-security-compliance.md)**
 - **[Phase 7: Observability](./docs/07-observability.md)**
 - **[Phase 8: Application Development](./docs/08-application-development.md)**
-- **[Phase 9: European Cloud Alternatives](./docs/09-european-cloud-alternatives.md)**
+- **[Phase 9: MLOps](./docs/09-mlops.md)**
 - **[Phase 10: On-Premise Cloud Infrastructure](./docs/10-on-premise-cloud.md)** - OpenStack, Proxmox, Open Source Cloud
 
 ---
@@ -361,7 +384,7 @@ cloud_training/
 - [ ] Phase 6: Security & Compliance
 - [ ] Phase 7: Observability
 - [ ] Phase 8: Application Development
-- [ ] Phase 9: European Cloud Alternatives
+- [ ] Phase 9: MLOps
 - [ ] Phase 10: On-Premise Cloud Infrastructure
 
 ---

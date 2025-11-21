@@ -73,7 +73,7 @@ This phase covers two main areas:
 ---
 
 **Previous Phase:** [Phase 7: Observability](../07-observability/)  
-**Next Phase:** [Phase 9: European Cloud Alternatives](../09-european-cloud-alternatives/)
+**Next Phase:** [Phase 9: MLOps](../09-mlops/)
 
 
 

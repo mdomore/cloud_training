@@ -668,7 +668,7 @@ By completing all phases, you now have a complete open source cloud stack:
 
 ---
 
-**Previous Phase:** [Phase 9: European Cloud Alternatives](../09-european-cloud-alternatives/)  
+**Previous Phase:** [Phase 9: MLOps](../09-mlops/)  
 **This is the final phase!** 🎉
 
 **Congratulations!** You've completed the full hybrid multi-cloud learning path, from foundations to on-premise cloud infrastructure, all using open source tools!
