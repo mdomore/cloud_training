@@ -46,9 +46,7 @@
 ### Questions to Answer:
 
 - Why do we need `#!/bin/bash` at the top?
-  - 📚 **Answer**: See [The Shebang](../../../docs/01-foundations.md#the-shebang)
 - What's the difference between `./script.sh` and `bash script.sh`?
-  - 📚 **Answer**: See [Running Scripts](../../../docs/01-foundations.md#running-scripts)
 
 ---
 
@@ -118,9 +116,7 @@
 ### Questions to Answer:
 
 - What's the difference between `$@` and `$*`?
-  - 📚 **Answer**: See [Special Variables](../../../docs/01-foundations.md#special-variables---what-they-are-and-how-to-use-them)
 - When would you use `${VAR:-default}`?
-  - 📚 **Answer**: See [Default Values](../../../docs/01-foundations.md#default-values)
 
 ---
 
@@ -211,9 +207,7 @@
 ### Questions to Answer:
 
 - What's the difference between `[ ]` and `[[ ]]`?
-  - 📚 **Answer**: See [Test Commands](../../../docs/01-foundations.md#test-commands)
 - When would you use `case` instead of `if/elif`?
-  - 📚 **Answer**: See [Case Statements](../../../docs/01-foundations.md#case-statements)
 
 ---
 
@@ -307,9 +301,7 @@
 ### Questions to Answer:
 
 - When would you use `while` vs `until`?
-  - 📚 **Answer**: See [until Loops](../../../docs/01-foundations.md#until-loops)
 - How do you break out of nested loops?
-  - 📚 **Answer**: See [Loop Control](../../../docs/01-foundations.md#loop-control)
 
 ---
 
@@ -394,9 +386,7 @@
 ### Questions to Answer:
 
 - What's the difference between `return` and `echo` for function output?
-  - 📚 **Answer**: See [Return Values](../../../docs/01-foundations.md#return-values)
 - Why use `local` variables in functions?
-  - 📚 **Answer**: See [Local Variables](../../../docs/01-foundations.md#local-variables)
 
 ---
 
@@ -475,9 +465,7 @@
 ### Questions to Answer:
 
 - What does `set -euo pipefail` do?
-  - 📚 **Answer**: See [Error Handling Techniques](../../../docs/01-foundations.md#error-handling-techniques)
 - When would you use `trap`?
-  - 📚 **Answer**: See [Error Handling Techniques](../../../docs/01-foundations.md#error-handling-techniques)
 
 ---
 
@@ -568,9 +556,7 @@
 ### Questions to Answer:
 
 - What's the difference between `>` and `>>`?
-  - 📚 **Answer**: See [Input/Output](../../../docs/01-foundations.md#7-inputoutput)
 - When would you use process substitution?
-  - 📚 **Answer**: See [Input/Output](../../../docs/01-foundations.md#7-inputoutput)
 
 ---
 
@@ -669,6 +655,68 @@ Create `backup.sh` that:
 4. **Network Connectivity Tester**: Test connectivity to multiple hosts
 
 ---
+
+
+
+---
+
+## Answers
+
+### Exercise 1: Basic Script Structure
+
+- **Why do we need `#!/bin/bash` at the top?**
+  📚 **Answer**: See [The Shebang](../../../docs/01-foundations.md#the-shebang)
+
+- **What's the difference between `./script.sh` and `bash script.sh`?**
+  📚 **Answer**: See [Running Scripts](../../../docs/01-foundations.md#running-scripts)
+
+### Exercise 2: Variables and Special Variables
+
+- **What's the difference between `$@` and `$*`?**
+  📚 **Answer**: See [Special Variables](../../../docs/01-foundations.md#special-variables---what-they-are-and-how-to-use-them)
+
+- **When would you use `${VAR:-default}`?**
+  📚 **Answer**: See [Default Values](../../../docs/01-foundations.md#default-values)
+
+### Exercise 3: Conditionals
+
+- **What's the difference between `[ ]` and `[[ ]]`?**
+  📚 **Answer**: See [Test Commands](../../../docs/01-foundations.md#test-commands)
+
+- **When would you use `case` instead of `if/elif`?**
+  📚 **Answer**: See [Case Statements](../../../docs/01-foundations.md#case-statements)
+
+### Exercise 4: Loops
+
+- **When would you use `while` vs `until`?**
+  📚 **Answer**: See [until Loops](../../../docs/01-foundations.md#until-loops)
+
+- **How do you break out of nested loops?**
+  📚 **Answer**: See [Loop Control](../../../docs/01-foundations.md#loop-control)
+
+### Exercise 5: Functions
+
+- **What's the difference between `return` and `echo` for function output?**
+  📚 **Answer**: See [Return Values](../../../docs/01-foundations.md#return-values)
+
+- **Why use `local` variables in functions?**
+  📚 **Answer**: See [Local Variables](../../../docs/01-foundations.md#local-variables)
+
+### Exercise 6: Error Handling
+
+- **What does `set -euo pipefail` do?**
+  📚 **Answer**: See [Error Handling Techniques](../../../docs/01-foundations.md#error-handling-techniques)
+
+- **When would you use `trap`?**
+  📚 **Answer**: See [Error Handling Techniques](../../../docs/01-foundations.md#error-handling-techniques)
+
+### Exercise 7: Input/Output
+
+- **What's the difference between `>` and `>>`?**
+  📚 **Answer**: See [Input/Output](../../../docs/01-foundations.md#7-inputoutput)
+
+- **When would you use process substitution?**
+  📚 **Answer**: See [Input/Output](../../../docs/01-foundations.md#7-inputoutput)
 
 **Next:** [System Configuration Exercises](../03-system-configuration/)
 

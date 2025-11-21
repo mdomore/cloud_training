@@ -1,0 +1,212 @@
+# Cursor Rules for Cloud Training Documentation
+
+## Documentation Structure Rules
+
+### 1. Content Separation
+
+**Documentation (`docs/` folder):**
+- Contains ONLY learning content, explanations, and references
+- NO exercises, NO detailed task lists with code blocks
+- May contain brief summaries or overviews of exercises with links
+- Format: `docs/XX-phase-name.md` (e.g., `docs/01-foundations.md`)
+
+**Exercises (`exercises/` folder):**
+- Contains ALL practical exercises, tasks, and hands-on activities
+- Questions should be listed WITHOUT answers in the main exercise sections
+- Answers should be in a separate "Answers" section at the END of each exercise file
+- Format: `exercises/XX-phase-name/YY-topic-name/README.md`
+
+**Examples (`examples/` folder):**
+- Contains code examples, sample scripts, and reference implementations
+- Should complement both documentation and exercises
+- Format: `examples/XX-phase-name/YY-topic-name/`
+
+### 2. Exercise Structure Rules
+
+**Questions Section:**
+- List ALL questions together in a "Questions to Answer:" section
+- Questions should NOT have answers immediately following them
+- Format:
+  ```markdown
+  ### Questions to Answer:
+  
+  - Question 1?
+  - Question 2?
+  - Question 3?
+  ```
+
+**Answers Section:**
+- Place ALL answers at the END of the exercise file
+- Group answers by exercise number/title
+- Format:
+  ```markdown
+  ---
+  
+  ## Answers
+  
+  ### Exercise 1: Topic Name
+  
+  - **Question 1?**
+    📚 **Answer**: See [Documentation Link](#link)
+  
+  - **Question 2?**
+    📚 **Answer**: See [Documentation Link](#link)
+  ```
+
+**Rationale:**
+- Students should attempt to answer questions first
+- Answers are available but require scrolling to the end
+- Encourages active learning and thinking before checking answers
+
+### 3. Documentation Content Rules
+
+**What belongs in `docs/`:**
+- ✅ Learning objectives
+- ✅ Conceptual explanations
+- ✅ Command references and examples (for learning)
+- ✅ Configuration examples
+- ✅ Best practices
+- ✅ Links to exercises (but not the exercises themselves)
+- ✅ Links to examples (but not the examples themselves)
+
+**What does NOT belong in `docs/`:**
+- ❌ Full exercise tasks with step-by-step instructions
+- ❌ Exercise questions
+- ❌ Exercise answers
+- ❌ Complete project implementations (these go in examples/)
+
+### 4. Exercise Content Rules
+
+**What belongs in `exercises/`:**
+- ✅ Task lists with instructions
+- ✅ Step-by-step commands to practice
+- ✅ Questions to answer (without answers)
+- ✅ Challenge scenarios
+- ✅ Deliverables and requirements
+- ✅ Links to relevant documentation sections
+
+**What does NOT belong in `exercises/`:**
+- ❌ Answers immediately after questions (answers go at the end)
+- ❌ Full documentation content (reference docs instead)
+
+### 5. File Organization Rules
+
+**Documentation Files:**
+- One main file per phase: `docs/XX-phase-name.md`
+- Use consistent heading hierarchy (## for main sections, ### for subsections)
+- Include Table of Contents at the top
+- Link to exercises and examples, don't duplicate them
+
+**Exercise Files:**
+- One README.md per exercise topic
+- Structure: Tasks → Questions (no answers) → Answers (at end)
+- Include links to relevant documentation sections
+
+**Example Files:**
+- Organize by phase and topic
+- Include README.md explaining what the examples demonstrate
+- Reference in both docs and exercises
+
+### 6. Code Block Rules
+
+**In Documentation:**
+- Use code blocks to show HOW commands work
+- Include explanations of what each command does
+- These are learning examples, not exercises
+
+**In Exercises:**
+- Use code blocks for tasks students should complete
+- Include placeholders or incomplete examples for students to fill
+- Provide complete solutions only in the Answers section or examples/
+
+### 7. Link Structure
+
+**From Documentation to Exercises:**
+```markdown
+**📝 Complete exercises in:** [exercises/XX-phase-name/YY-topic-name/](../../exercises/XX-phase-name/YY-topic-name/)
+```
+
+**From Exercises to Documentation:**
+```markdown
+📚 **Answer**: See [Section Name](../../../docs/XX-phase-name.md#section-anchor)
+```
+
+**From Exercises to Examples:**
+```markdown
+**💡 Reference examples in:** [examples/XX-phase-name/YY-topic-name/](../../../examples/XX-phase-name/YY-topic-name/)
+```
+
+### 8. Answer Format Rules
+
+**In Exercise Files:**
+- Answers MUST be in a separate "Answers" section at the end
+- Answers should be grouped by exercise
+- Each answer should link to the relevant documentation section
+- Format:
+  ```markdown
+  - **Question text?**
+    📚 **Answer**: See [Documentation Section](../../../docs/file.md#anchor)
+  ```
+
+**Never:**
+- Place answers immediately after questions
+- Mix questions and answers in the same list
+- Put answers in the documentation files
+
+### 9. Heading Consistency
+
+**Documentation Headings:**
+- `##` for main sections (e.g., "Linux Fundamentals")
+- `###` for subsections (e.g., "1. File System Hierarchy")
+- `####` for detailed topics
+- Ensure unique headings to avoid TOC conflicts
+
+**Exercise Headings:**
+- `##` for exercise titles (e.g., "Exercise 1: Topic")
+- `###` for sections within exercises (e.g., "Tasks:", "Questions to Answer:")
+- `##` for the "Answers" section at the end
+
+### 10. When Adding New Content
+
+**Before adding to docs/:**
+- Is this learning content or an exercise?
+- If it's an exercise, put it in exercises/
+- If it's an example, put it in examples/
+- Only put conceptual/educational content in docs/
+
+**Before adding to exercises/:**
+- Are questions separated from answers?
+- Are answers at the end of the file?
+- Are there links to relevant documentation?
+
+**Before adding to examples/:**
+- Is this a complete, working example?
+- Does it complement the documentation?
+- Is it referenced from docs or exercises?
+
+---
+
+## Quick Reference Checklist
+
+When editing files, verify:
+
+- [ ] Documentation is in `docs/`, not mixed with exercises
+- [ ] Exercises are in `exercises/`, with questions separate from answers
+- [ ] Answers are at the END of exercise files, not inline
+- [ ] Examples are in `examples/`, referenced but not duplicated
+- [ ] Links between docs, exercises, and examples are correct
+- [ ] No exercise content in documentation files
+- [ ] No documentation content in exercise files (only references)
+
+---
+
+## AI Assistant Guidelines
+
+When helping with this codebase:
+
+1. **Always check location first**: Is the content going to the right folder?
+2. **Separate questions from answers**: Never put answers immediately after questions in exercises
+3. **Link, don't duplicate**: Reference content instead of copying it
+4. **Maintain structure**: Follow the established patterns for headings, links, and organization
+5. **Verify separation**: Before committing, ensure docs/, exercises/, and examples/ are properly separated
+

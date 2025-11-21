@@ -51,9 +51,7 @@
 ### Questions to Answer:
 
 - What's the difference between TCP and UDP?
-  - 📚 **Answer**: See [Core Protocols](../../../docs/01-foundations.md#2-core-protocols)
 - How do you identify which process is using a port?
-  - 📚 **Answer**: See [Network Concepts](../../../docs/01-foundations.md#3-network-concepts)
 
 ---
 
@@ -125,9 +123,7 @@
 ### Questions to Answer:
 
 - What's the order of DNS resolution?
-  - 📚 **Answer**: See [Core Protocols](../../../docs/01-foundations.md#2-core-protocols)
 - How does /etc/hosts affect DNS resolution?
-  - 📚 **Answer**: See [Core Protocols](../../../docs/01-foundations.md#2-core-protocols)
 
 ---
 
@@ -192,9 +188,7 @@
 ### Questions to Answer:
 
 - What does traceroute show?
-  - 📚 **Answer**: See [Network Concepts](../../../docs/01-foundations.md#3-network-concepts)
 - How do you test if a firewall is blocking a port?
-  - 📚 **Answer**: See [Network Concepts](../../../docs/01-foundations.md#3-network-concepts)
 
 ---
 
@@ -236,9 +230,7 @@
 ### Questions to Answer:
 
 - What's the difference between /24 and /16?
-  - 📚 **Answer**: See [Network Concepts](../../../docs/01-foundations.md#3-network-concepts)
 - How do you calculate the number of hosts in a subnet?
-  - 📚 **Answer**: See [Network Concepts](../../../docs/01-foundations.md#3-network-concepts)
 
 ---
 
@@ -297,6 +289,44 @@
 - Diagnostic commands
 
 ---
+
+
+
+---
+
+## Answers
+
+### Exercise 1: Network Protocol Analysis
+
+- **What's the difference between TCP and UDP?**
+  📚 **Answer**: See [Core Protocols](../../../docs/01-foundations.md#2-core-protocols)
+
+- **How do you identify which process is using a port?**
+  📚 **Answer**: See [Network Concepts](../../../docs/01-foundations.md#3-network-concepts)
+
+### Exercise 2: DNS Configuration and Testing
+
+- **What's the order of DNS resolution?**
+  📚 **Answer**: See [Core Protocols](../../../docs/01-foundations.md#2-core-protocols)
+
+- **How does /etc/hosts affect DNS resolution?**
+  📚 **Answer**: See [Core Protocols](../../../docs/01-foundations.md#2-core-protocols)
+
+### Exercise 3: Network Connectivity Testing
+
+- **What does traceroute show?**
+  📚 **Answer**: See [Network Concepts](../../../docs/01-foundations.md#3-network-concepts)
+
+- **How do you test if a firewall is blocking a port?**
+  📚 **Answer**: See [Network Concepts](../../../docs/01-foundations.md#3-network-concepts)
+
+### Exercise 4: Subnet Calculations
+
+- **What's the difference between /24 and /16?**
+  📚 **Answer**: See [Network Concepts](../../../docs/01-foundations.md#3-network-concepts)
+
+- **How do you calculate the number of hosts in a subnet?**
+  📚 **Answer**: See [Network Concepts](../../../docs/01-foundations.md#3-network-concepts)
 
 **Next:** [Development Basics Exercises](../06-development-basics/)
 

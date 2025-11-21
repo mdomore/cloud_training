@@ -74,9 +74,7 @@
 ### Questions to Answer:
 
 - Why disable password authentication?
-  - 📚 **Answer**: See [SSH Configuration](../../../docs/01-foundations.md#1-ssh-configuration-and-hardening)
 - What's the benefit of changing the default port?
-  - 📚 **Answer**: See [SSH Configuration](../../../docs/01-foundations.md#1-ssh-configuration-and-hardening)
 
 ---
 
@@ -153,9 +151,7 @@
 ### Questions to Answer:
 
 - What's the default policy of UFW?
-  - 📚 **Answer**: See [Firewall Management](../../../docs/01-foundations.md#2-firewall-management)
 - How do you allow a port range?
-  - 📚 **Answer**: See [Firewall Management](../../../docs/01-foundations.md#2-firewall-management)
 
 ---
 
@@ -226,9 +222,7 @@
 ### Questions to Answer:
 
 - Why use `visudo` instead of editing sudoers directly?
-  - 📚 **Answer**: See [User Access Control](../../../docs/01-foundations.md#3-user-access-control)
 - How do you restrict sudo access to specific commands?
-  - 📚 **Answer**: See [User Access Control](../../../docs/01-foundations.md#3-user-access-control)
 
 ---
 
@@ -284,9 +278,7 @@
 ### Questions to Answer:
 
 - When would you use ACLs instead of standard permissions?
-  - 📚 **Answer**: See [File Permissions and ACLs](../../../docs/01-foundations.md#4-file-permissions-and-acls)
 - How do you remove all ACLs from a file?
-  - 📚 **Answer**: See [File Permissions and ACLs](../../../docs/01-foundations.md#4-file-permissions-and-acls)
 
 ---
 
@@ -390,6 +382,44 @@ Create `harden_server.sh` that:
 - Recommendations for improvement
 
 ---
+
+
+
+---
+
+## Answers
+
+### Exercise 1: SSH Configuration and Hardening
+
+- **Why disable password authentication?**
+  📚 **Answer**: See [SSH Configuration](../../../docs/01-foundations.md#1-ssh-configuration-and-hardening)
+
+- **What's the benefit of changing the default port?**
+  📚 **Answer**: See [SSH Configuration](../../../docs/01-foundations.md#1-ssh-configuration-and-hardening)
+
+### Exercise 2: Firewall Configuration
+
+- **What's the default policy of UFW?**
+  📚 **Answer**: See [Firewall Management](../../../docs/01-foundations.md#2-firewall-management)
+
+- **How do you allow a port range?**
+  📚 **Answer**: See [Firewall Management](../../../docs/01-foundations.md#2-firewall-management)
+
+### Exercise 3: User Access Control
+
+- **Why use `visudo` instead of editing sudoers directly?**
+  📚 **Answer**: See [User Access Control](../../../docs/01-foundations.md#3-user-access-control)
+
+- **How do you restrict sudo access to specific commands?**
+  📚 **Answer**: See [User Access Control](../../../docs/01-foundations.md#3-user-access-control)
+
+### Exercise 4: File Permissions and ACLs
+
+- **When would you use ACLs instead of standard permissions?**
+  📚 **Answer**: See [File Permissions and ACLs](../../../docs/01-foundations.md#4-file-permissions-and-acls)
+
+- **How do you remove all ACLs from a file?**
+  📚 **Answer**: See [File Permissions and ACLs](../../../docs/01-foundations.md#4-file-permissions-and-acls)
 
 **Next:** [Networking Exercises](../05-networking/)
 

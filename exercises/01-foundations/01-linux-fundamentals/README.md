@@ -58,11 +58,8 @@
 ### Questions to Answer:
 
 - What is the difference between `/bin` and `/usr/bin`?
-  - 📚 **Answer**: See [File System Hierarchy - /bin and /usr](../../../docs/01-foundations.md#1-file-system-hierarchy)
 - Why is `/etc` important for system administration?
-  - 📚 **Answer**: See [/etc - Configuration Files](../../../docs/01-foundations.md#etc---configuration-files)
 - What happens to files in `/tmp` on reboot?
-  - 📚 **Answer**: See [/tmp - Temporary Files](../../../docs/01-foundations.md#tmp---temporary-files)
 
 ---
 
@@ -131,11 +128,8 @@
 ### Questions to Answer:
 
 - What is the difference between primary and secondary groups?
-  - 📚 **Answer**: See [Users, Groups, and Permissions](../../../docs/01-foundations.md#2-users-groups-and-permissions)
 - What UID does root have?
-  - 📚 **Answer**: See [/etc/passwd - User Accounts](../../../docs/01-foundations.md#etcpasswd---user-accounts)
 - Why should you use `-aG` instead of `-G` when adding users to groups?
-  - 📚 **Answer**: See [User Management](../../../docs/01-foundations.md#2-users-groups-and-permissions)
 
 ---
 
@@ -221,11 +215,8 @@
 ### Questions to Answer:
 
 - What does 755 mean in octal notation?
-  - 📚 **Answer**: See [File Permissions](../../../docs/01-foundations.md#3-file-permissions-and-ownership)
 - When would you use SUID?
-  - 📚 **Answer**: See [Special Permissions](../../../docs/01-foundations.md#special-permissions)
 - What's the difference between SUID and SGID?
-  - 📚 **Answer**: See [Special Permissions](../../../docs/01-foundations.md#special-permissions)
 
 ---
 
@@ -311,11 +302,8 @@
 ### Questions to Answer:
 
 - What's the difference between `ps aux` and `ps -ef`?
-  - 📚 **Answer**: See [Process Management](../../../docs/01-foundations.md#3-process-management)
 - When would you use `nohup` vs regular background jobs?
-  - 📚 **Answer**: See [Process Management](../../../docs/01-foundations.md#3-process-management)
 - What does a zombie process mean?
-  - 📚 **Answer**: See [Process Management](../../../docs/01-foundations.md#3-process-management)
 
 ---
 
@@ -428,11 +416,8 @@
 ### Questions to Answer:
 
 - What's the difference between `start` and `enable`?
-  - 📚 **Answer**: See [System Services (systemd)](../../../docs/01-foundations.md#4-system-services-systemd)
 - When would you use `reload` vs `restart`?
-  - 📚 **Answer**: See [System Services (systemd)](../../../docs/01-foundations.md#4-system-services-systemd)
 - What is a systemd unit?
-  - 📚 **Answer**: See [System Services (systemd)](../../../docs/01-foundations.md#4-system-services-systemd)
 
 ---
 
@@ -1157,6 +1142,69 @@ done < users.txt
 ```
 
 ---
+
+
+
+---
+
+---
+
+## Answers
+
+### Exercise 1: File System Navigation
+
+- **What is the difference between `/bin` and `/usr/bin`?**
+  📚 **Answer**: See [File System Hierarchy - /bin and /usr](../../../docs/01-foundations.md#1-file-system-hierarchy)
+
+- **Why is `/etc` important for system administration?**
+  📚 **Answer**: See [/etc - Configuration Files](../../../docs/01-foundations.md#etc---configuration-files)
+
+- **What happens to files in `/tmp` on reboot?**
+  📚 **Answer**: See [/tmp - Temporary Files](../../../docs/01-foundations.md#tmp---temporary-files)
+
+### Exercise 2: Users and Groups
+
+- **What is the difference between primary and secondary groups?**
+  📚 **Answer**: See [Users, Groups, and Permissions](../../../docs/01-foundations.md#2-users-groups-and-permissions)
+
+- **What UID does root have?**
+  📚 **Answer**: See [/etc/passwd - User Accounts](../../../docs/01-foundations.md#etcpasswd---user-accounts)
+
+- **Why should you use `-aG` instead of `-G` when adding users to groups?**
+  📚 **Answer**: See [User Management](../../../docs/01-foundations.md#2-users-groups-and-permissions)
+
+### Exercise 3: File Permissions
+
+- **What does 755 mean in octal notation?**
+  📚 **Answer**: See [File Permissions](../../../docs/01-foundations.md#3-file-permissions-and-ownership)
+
+- **When would you use SUID?**
+  📚 **Answer**: See [Special Permissions](../../../docs/01-foundations.md#special-permissions)
+
+- **What's the difference between SUID and SGID?**
+  📚 **Answer**: See [Special Permissions](../../../docs/01-foundations.md#special-permissions)
+
+### Exercise 4: Process Management
+
+- **What's the difference between `ps aux` and `ps -ef`?**
+  📚 **Answer**: See [Process Management](../../../docs/01-foundations.md#3-process-management)
+
+- **When would you use `nohup` vs regular background jobs?**
+  📚 **Answer**: See [Process Management](../../../docs/01-foundations.md#3-process-management)
+
+- **What does a zombie process mean?**
+  📚 **Answer**: See [Process Management](../../../docs/01-foundations.md#3-process-management)
+
+### Exercise 5: systemd Services
+
+- **What's the difference between `start` and `enable`?**
+  📚 **Answer**: See [System Services (systemd)](../../../docs/01-foundations.md#4-system-services-systemd)
+
+- **When would you use `reload` vs `restart`?**
+  📚 **Answer**: See [System Services (systemd)](../../../docs/01-foundations.md#4-system-services-systemd)
+
+- **What is a systemd unit?**
+  📚 **Answer**: See [System Services (systemd)](../../../docs/01-foundations.md#4-system-services-systemd)
 
 **Next:** [Shell Scripting Exercises](../02-shell-scripting/)
 
