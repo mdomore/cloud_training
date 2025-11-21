@@ -170,6 +170,10 @@ If VirtualBox detected your OS and shows the "Set up unattended guest OS install
    - You'll see the login prompt
    - Log in with your username (`student`) and password
 
+**⚠️ Important: Keyboard Layout Issue**
+- If you have a **French keyboard** (AZERTY) but the VM detects QWERTY, you'll need to configure it after installation
+- See **Step 5.5: Configure Keyboard Layout** below for the fix
+
 **Skip to Step 5: Verify Installation** if you used unattended installation.
 
 ### Option B: Manual Installation (If Unattended Not Available)
@@ -218,7 +222,10 @@ If VirtualBox detected your OS and shows the "Set up unattended guest OS install
    - The VM will boot from the ISO
    - Follow the Ubuntu Server installation wizard:
      - **Language**: Choose your language
-     - **Keyboard**: Choose your keyboard layout
+     - **Keyboard**: ⚠️ **IMPORTANT**: Choose your keyboard layout
+       - For **French keyboard (AZERTY)**: Select **French** > **French (AZERTY)**
+       - Test the layout by typing in the test box - verify that `azerty` appears correctly
+       - If you see `qwerty` instead, the wrong layout is selected
      - **Network**: Use default (DHCP)
      - **Proxy**: Leave empty (unless you need one)
      - **Ubuntu Archive Mirror**: Use default
@@ -264,6 +271,89 @@ free -h
 sudo apt update
 sudo apt upgrade -y
 ```
+
+## ⌨️ Step 5.5: Configure Keyboard Layout (French Keyboard)
+
+If your keyboard layout is incorrect (e.g., French AZERTY detected as QWERTY), fix it:
+
+### Method 1: Using `dpkg-reconfigure` (Recommended)
+
+```bash
+# Reconfigure keyboard layout
+sudo dpkg-reconfigure keyboard-configuration
+
+# Follow the prompts:
+# 1. Select keyboard model: Choose "Generic 105-key PC (intl.)" or your model
+# 2. Select layout: Choose "French"
+# 3. Select variant: Choose "French (AZERTY)" or "French (AZERTY, Latin-9 only)"
+# 4. Compose key: Choose "No compose key" or your preference
+# 5. AltGr key: Choose "The default for the keyboard layout"
+# 6. Key to function as Caps Lock: Choose "Caps Lock" or your preference
+
+# Apply the changes
+sudo setupcon
+
+# Test your keyboard - type: azerty
+# You should see: azerty (not qwerty)
+```
+
+### Method 2: Using `localectl` (Alternative)
+
+```bash
+# List available keyboard layouts
+localectl list-keymaps | grep -i fr
+
+# Set French AZERTY layout
+sudo localectl set-keymap fr
+
+# Verify the change
+localectl
+
+# Test your keyboard
+```
+
+### Method 3: Manual Configuration (If above methods don't work)
+
+```bash
+# Edit keyboard configuration
+sudo nano /etc/default/keyboard
+
+# Change the file to:
+XKBMODEL="pc105"
+XKBLAYOUT="fr"
+XKBVARIANT="azerty"
+XKBOPTIONS=""
+
+# Save and exit (Ctrl+X, then Y, then Enter)
+
+# Apply changes
+sudo setupcon
+
+# Reboot if needed
+sudo reboot
+```
+
+### Verify Keyboard Layout
+
+After configuration, test your keyboard:
+
+```bash
+# Type this command to test
+echo "Test: azerty AZERTY @ # é è ç à"
+
+# If you see the correct characters, your keyboard is configured correctly!
+# If you see wrong characters, try the methods above again
+```
+
+### VirtualBox Host Key Mapping (Optional)
+
+If you want to use your French keyboard layout even when VirtualBox captures keys:
+
+1. **VirtualBox Settings** > **Input** > **Keyboard**
+2. Check **"Auto-capture Keyboard"** (optional)
+3. The VM should now respect your configured keyboard layout
+
+**Note**: After changing the keyboard layout, you may need to log out and log back in, or reboot the VM for changes to take full effect.
 
 ## 📸 Step 6: Create Your First Snapshot
 
