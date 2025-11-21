@@ -2049,97 +2049,13 @@ sudo systemctl isolate multi-user.target
 **📝 Complete exercises in:** [exercises/01-foundations/01-linux-fundamentals/](../../../exercises/01-foundations/01-linux-fundamentals/)  
 **💡 Reference examples in:** [examples/01-foundations/01-linux-fundamentals/](../../../examples/01-foundations/01-linux-fundamentals/)
 
-### Exercise 1: File System Navigation
-```bash
-# 1. Explore the file system hierarchy
-cd /
-ls -la
-
-# 2. Navigate to each major directory and understand its purpose
-cd /bin && ls | head -10
-cd /etc && ls | head -10
-cd /var && ls -la
-cd /proc && cat cpuinfo | head -20
-
-# 3. Find all configuration files in /etc
-find /etc -type f -name "*.conf" | head -20
-
-# 4. Check disk usage
-du -sh /var/*
-df -h
-```
-
-### Exercise 2: User and Permission Management
-```bash
-# 1. Create a test user
-sudo useradd -m -s /bin/bash testuser
-sudo passwd testuser
-
-# 2. Create a test group
-sudo groupadd testgroup
-
-# 3. Add user to group
-sudo usermod -aG testgroup testuser
-
-# 4. Create a test file and set permissions
-touch testfile.txt
-chmod 644 testfile.txt
-ls -l testfile.txt
-
-# 5. Practice with chmod
-chmod 755 testfile.txt
-chmod u+x testfile.txt
-chmod g-w testfile.txt
-
-# 6. Set up ACLs
-sudo setfacl -m u:testuser:rwx testfile.txt
-getfacl testfile.txt
-```
-
-### Exercise 3: Process Management
-```bash
-# 1. List all processes
-ps aux | head -20
-
-# 2. Find processes using most CPU
-ps aux --sort=-%cpu | head -10
-
-# 3. Monitor processes in real-time
-htop
-
-# 4. Start a process in background
-sleep 100 &
-
-# 5. Manage background jobs
-jobs
-fg %1
-# Press Ctrl+Z to suspend
-bg
-
-# 6. Find and kill a process
-ps aux | grep sleep
-kill <PID>
-```
-
-### Exercise 4: systemd Services
-```bash
-# 1. List all services
-systemctl list-units --type=service
-
-# 2. Check status of a service
-sudo systemctl status ssh
-
-# 3. View service logs
-sudo journalctl -u ssh -n 50
-
-# 4. Create a simple custom service
-sudo nano /etc/systemd/system/testservice.service
-# Add service definition
-sudo systemctl daemon-reload
-sudo systemctl enable testservice
-sudo systemctl start testservice
-sudo systemctl status testservice
-```
+The exercises cover:
+- File system navigation and hierarchy
+- User and group management
+- File permissions and ownership
+- Process management
+- systemd services
+- Complete system setup scenarios
 
 ---
 

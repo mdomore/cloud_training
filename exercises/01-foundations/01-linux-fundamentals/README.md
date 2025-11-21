@@ -338,6 +338,11 @@
    
    # Check status of a service
    sudo systemctl status ssh
+   
+   # List failed services (Useful for troubleshooting!)
+   systemctl --failed
+   # or
+   systemctl list-units --state=failed
    ```
 
 2. **Manage services**
