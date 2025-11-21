@@ -25,19 +25,20 @@
   - [Practical Exercises](#practical-exercises)
   - [Notes](#notes)
     - [Linux Fundamentals](#linux-fundamentals)
-  - [Purpose](#purpose)
-  - [Learning Objectives](#learning-objectives)
+  - [Linux Fundamentals - Purpose](#linux-fundamentals---purpose)
+  - [Linux Fundamentals - Learning Objectives](#linux-fundamentals---learning-objectives)
   - [1. File System Hierarchy](#1-file-system-hierarchy)
   - [2. Users, Groups, and Permissions](#2-users-groups-and-permissions)
+  - [2.5. Understanding sudo](#25-understanding-sudo)
   - [3. Process Management](#3-process-management)
     - [Process Monitoring Examples](#process-monitoring-examples)
   - [4. System Services (systemd)](#4-system-services-systemd)
-  - [Practical Exercises](#practical-exercises)
+  - [Linux Fundamentals - Practical Exercises](#linux-fundamentals---practical-exercises)
   - [Common Commands Reference](#common-commands-reference)
-  - [Notes](#notes)
+  - [Linux Fundamentals - Notes](#linux-fundamentals---notes)
     - [Shell Scripting](#shell-scripting)
-  - [Purpose](#purpose)
-  - [Learning Objectives](#learning-objectives)
+  - [Shell Scripting - Purpose](#shell-scripting---purpose)
+  - [Shell Scripting - Learning Objectives](#shell-scripting---learning-objectives)
   - [1. Shell Basics](#1-shell-basics)
   - [2. Variables](#2-variables)
   - [3. Conditionals](#3-conditionals)
@@ -49,42 +50,42 @@
   - [Complete Script Examples](#complete-script-examples)
     - [Example 4: Log Monitoring Script](#example-4-log-monitoring-script)
   - [Scripting Best Practices Summary](#scripting-best-practices-summary)
-  - [Notes](#notes)
+  - [Shell Scripting - Notes](#shell-scripting---notes)
     - [System Configuration](#system-configuration)
-  - [Purpose](#purpose)
-  - [Learning Objectives](#learning-objectives)
+  - [System Configuration - Purpose](#system-configuration---purpose)
+  - [System Configuration - Learning Objectives](#system-configuration---learning-objectives)
   - [Topics to Cover](#topics-to-cover)
   - [Learning Resources](#learning-resources)
-  - [Practical Exercises](#practical-exercises)
+  - [System Configuration - Practical Exercises](#system-configuration---practical-exercises)
   - [Configuration Files Reference](#configuration-files-reference)
   - [Detailed Examples and Commands](#detailed-examples-and-commands)
   - [Troubleshooting Guide](#troubleshooting-guide)
-  - [Notes](#notes)
+  - [System Configuration - Notes](#system-configuration---notes)
     - [Security Basics](#security-basics)
-  - [Purpose](#purpose)
-  - [Learning Objectives](#learning-objectives)
+  - [Security Basics - Purpose](#security-basics---purpose)
+  - [Security Basics - Learning Objectives](#security-basics---learning-objectives)
   - [Topics to Cover](#topics-to-cover)
   - [Learning Resources](#learning-resources)
-  - [Practical Exercises](#practical-exercises)
+  - [Security Basics - Practical Exercises](#security-basics---practical-exercises)
   - [Security Checklist](#security-checklist)
   - [Configuration Files Reference](#configuration-files-reference)
   - [Detailed Examples and Configurations](#detailed-examples-and-configurations)
   - [Security Checklist](#security-checklist)
   - [Troubleshooting Security Issues](#troubleshooting-security-issues)
-  - [Notes](#notes)
+  - [Security Basics - Notes](#security-basics---notes)
   - [Networking](#networking)
-  - [Purpose](#purpose)
+  - [Networking - Purpose](#networking---purpose)
   - [Topics Covered](#topics-covered)
     - [4. Cloud Networking Basics](#4-cloud-networking-basics)
   - [Learning Resources](#learning-resources)
-  - [Practical Exercises](#practical-exercises)
-  - [Notes](#notes)
+  - [Networking - Practical Exercises](#networking---practical-exercises)
+  - [Networking - Notes](#networking---notes)
   - [Development Basics](#development-basics)
-  - [Purpose](#purpose)
+  - [Development Basics - Purpose](#development-basics---purpose)
   - [Topics Covered](#topics-covered)
   - [Learning Resources](#learning-resources)
-  - [Practical Exercises](#practical-exercises)
-  - [Notes](#notes)
+  - [Development Basics - Practical Exercises](#development-basics---practical-exercises)
+  - [Development Basics - Notes](#development-basics---notes)
 
 ---
 
@@ -231,11 +232,11 @@ Use the Notes sections throughout this documentation for documenting your learni
 
 ### Linux Fundamentals
 
-## Purpose
+## Linux Fundamentals - Purpose
 
 Learn the essential Linux concepts and commands needed for system administration and cloud infrastructure management. This section provides comprehensive coverage of Linux fundamentals with detailed explanations and practical examples.
 
-## Learning Objectives
+## Linux Fundamentals - Learning Objectives
 
 By the end of this section, you should be able to:
 - Navigate and understand the Linux file system hierarchy
@@ -1032,6 +1033,248 @@ getfacl /shared
 
 ---
 
+## 2.5. Understanding sudo
+
+### What is sudo?
+
+**sudo** (Super User DO) allows you to run commands with elevated privileges (as root or another user) without logging in as root. This is essential for system administration tasks.
+
+**Why use sudo instead of logging in as root?**
+- **Security**: Better audit trail (logs who ran what)
+- **Safety**: Prevents accidental system damage
+- **Best Practice**: Standard way to manage Linux systems
+- **Granular Control**: Can restrict which commands users can run
+
+### Basic sudo Usage
+
+#### Running Commands with sudo
+
+```bash
+# Run a single command as root
+sudo command
+
+# Example: Install a package
+sudo apt install htop
+
+# Example: Edit system configuration
+sudo nano /etc/hosts
+
+# Example: View system logs
+sudo journalctl -u ssh
+
+# Example: Restart a service
+sudo systemctl restart ssh
+```
+
+#### When sudo Asks for Password
+
+- First use: sudo prompts for your user password (not root password)
+- Timeout: After 15 minutes (default), sudo asks again
+- Security: Password is not displayed as you type
+
+```bash
+# First sudo command
+sudo apt update
+# [sudo] password for student: [type your password]
+
+# Within 15 minutes, no password needed
+sudo apt install vim
+# No password prompt
+
+# After timeout, password required again
+sudo systemctl status ssh
+# [sudo] password for student: [type password]
+```
+
+### Checking sudo Access
+
+```bash
+# Check if your user has sudo privileges
+sudo -v
+# If successful, you have sudo access
+
+# Check sudo configuration
+sudo -l
+# Lists commands you're allowed to run
+
+# Check if you're in sudo group
+groups
+# Look for 'sudo' in the output
+
+# View your sudo privileges
+sudo whoami
+# Should output: root
+```
+
+### Common sudo Commands
+
+#### System Administration Tasks
+
+```bash
+# Package management
+sudo apt update
+sudo apt install package-name
+sudo apt remove package-name
+
+# Service management
+sudo systemctl start servicename
+sudo systemctl stop servicename
+sudo systemctl restart servicename
+sudo systemctl status servicename
+
+# User management
+sudo useradd username
+sudo userdel username
+sudo passwd username
+
+# File operations (system files)
+sudo nano /etc/hosts
+sudo cp /etc/ssh/sshd_config /etc/ssh/sshd_config.backup
+sudo chown user:group /path/to/file
+
+# Network configuration
+sudo ip addr add 192.168.1.100/24 dev eth0
+sudo systemctl restart networking
+
+# View system logs
+sudo journalctl -u servicename
+sudo tail -f /var/log/syslog
+```
+
+### sudo vs su
+
+**sudo** (Super User DO):
+- Run specific command as root
+- Uses your password
+- Better audit trail
+- Recommended approach
+
+**su** (Switch User):
+- Switch to root user (or another user)
+- Uses root's password
+- Full root session
+- Less secure
+
+```bash
+# Using sudo (recommended)
+sudo apt update
+sudo systemctl restart nginx
+
+# Using su (alternative, less secure)
+su -
+# Enter root password
+apt update
+systemctl restart nginx
+exit
+```
+
+### Understanding "Permission Denied" Errors
+
+If you see "Permission denied" errors:
+
+```bash
+# Example error
+$ systemctl restart nginx
+# Failed to restart nginx.service: Access denied
+
+# Solution: Use sudo
+$ sudo systemctl restart nginx
+# [sudo] password for student: 
+# Successfully restarted nginx.service
+```
+
+**Common scenarios requiring sudo:**
+- Installing/removing packages
+- Editing files in `/etc/`
+- Managing services
+- Creating/deleting users
+- Changing file ownership
+- Modifying network configuration
+- Viewing system logs
+- Mounting filesystems
+
+### sudo Best Practices
+
+1. **Use sudo for specific commands** (not full root session)
+   ```bash
+   # Good
+   sudo apt update
+   
+   # Avoid (unless necessary)
+   sudo su -
+   ```
+
+2. **Double-check commands before running with sudo**
+   ```bash
+   # Dangerous - be careful!
+   sudo rm -rf /path/to/directory
+   ```
+
+3. **Don't share your sudo password**
+   - Each user should have their own account
+   - sudo logs who ran what command
+
+4. **Use visudo for sudo configuration**
+   ```bash
+   # Always use visudo (not direct editing)
+   sudo visudo
+   # NOT: sudo nano /etc/sudoers
+   ```
+
+### Troubleshooting sudo
+
+#### "User is not in the sudoers file"
+
+If you get this error, your user doesn't have sudo privileges:
+
+```bash
+# Check if user is in sudo group
+groups
+# If 'sudo' is not listed, you need to be added
+
+# As root (or another admin), add user to sudo group:
+sudo usermod -aG sudo username
+
+# User needs to log out and back in for changes to take effect
+```
+
+#### "sudo: no tty present and no askpass program specified"
+
+This happens when running sudo in scripts without a terminal:
+
+```bash
+# Solution: Use NOPASSWD in sudoers (for scripts)
+# Or run script with -t flag
+sudo -S command < password_file
+```
+
+### Quick Reference
+
+```bash
+# Basic usage
+sudo command
+
+# Run command as specific user
+sudo -u username command
+
+# Run command as root (explicit)
+sudo -u root command
+
+# Check sudo access
+sudo -v
+
+# List allowed commands
+sudo -l
+
+# Edit sudoers file safely
+sudo visudo
+
+# View sudo logs
+sudo grep sudo /var/log/auth.log
+```
+
+---
+
 ## 3. Process Management
 
 ### Understanding Processes
@@ -1801,7 +2044,7 @@ sudo systemctl isolate multi-user.target
 
 ---
 
-## Practical Exercises
+## Linux Fundamentals - Practical Exercises
 
 **📝 Complete exercises in:** [exercises/01-foundations/01-linux-fundamentals/](../../../exercises/01-foundations/01-linux-fundamentals/)  
 **💡 Reference examples in:** [examples/01-foundations/01-linux-fundamentals/](../../../examples/01-foundations/01-linux-fundamentals/)
@@ -1951,7 +2194,7 @@ journalctl -u service      # View logs
 
 ---
 
-## Notes
+## Linux Fundamentals - Notes
 
 Document your learnings, commands, and configurations here. Include:
 - Useful commands and their options
@@ -1965,11 +2208,11 @@ Document your learnings, commands, and configurations here. Include:
 
 ### Shell Scripting
 
-## Purpose
+## Shell Scripting - Purpose
 
 Learn to write shell scripts for automation, system administration, and cloud infrastructure management. Master Bash/Zsh scripting to automate repetitive tasks with comprehensive examples and best practices.
 
-## Learning Objectives
+## Shell Scripting - Learning Objectives
 
 By the end of this section, you should be able to:
 - Write functional shell scripts with proper structure
@@ -4005,7 +4248,7 @@ done
 
 ---
 
-## Notes
+## Shell Scripting - Notes
 
 Document your learnings here:
 - Script examples you've created
@@ -4019,11 +4262,11 @@ Document your learnings here:
 
 ### System Configuration
 
-## Purpose
+## System Configuration - Purpose
 
 Learn to configure Linux systems for network, packages, services, and logs. Essential skills for managing cloud infrastructure and servers.
 
-## Learning Objectives
+## System Configuration - Learning Objectives
 
 By the end of this section, you should be able to:
 - Configure network interfaces
@@ -4151,7 +4394,7 @@ By the end of this section, you should be able to:
 - systemd and journalctl man pages
 - Log management best practices
 
-## Practical Exercises
+## System Configuration - Practical Exercises
 
 **📝 Complete exercises in:** [exercises/01-foundations/03-system-configuration/](../../../exercises/01-foundations/03-system-configuration/)  
 **💡 Reference examples in:** [examples/01-foundations/03-system-configuration/](../../../examples/01-foundations/03-system-configuration/)
@@ -4564,7 +4807,7 @@ sudo systemctl status servicename
 systemctl list-dependencies servicename
 ```
 
-## Notes
+## System Configuration - Notes
 
 Document your learnings here:
 - Configuration examples
@@ -4579,11 +4822,11 @@ Document your learnings here:
 
 ### Security Basics
 
-## Purpose
+## Security Basics - Purpose
 
 Learn essential Linux security practices to secure servers and cloud infrastructure. Understand SSH hardening, firewall management, access control, and file security.
 
-## Learning Objectives
+## Security Basics - Learning Objectives
 
 By the end of this section, you should be able to:
 - Secure SSH access
@@ -4761,7 +5004,7 @@ By the end of this section, you should be able to:
 - OWASP security guidelines
 - Distribution-specific security guides
 
-## Practical Exercises
+## Security Basics - Practical Exercises
 
 **📝 Complete exercises in:** [exercises/01-foundations/04-security-basics/](../../../exercises/01-foundations/04-security-basics/)  
 **💡 Reference examples in:** [examples/01-foundations/04-security-basics/](../../../examples/01-foundations/04-security-basics/)
@@ -5294,7 +5537,7 @@ chmod 644 filename
 chown user:group filename
 ```
 
-## Notes
+## Security Basics - Notes
 
 Document your learnings here:
 - SSH configuration examples
@@ -5313,7 +5556,7 @@ Document your learnings here:
 
 ## Networking
 
-## Purpose
+## Networking - Purpose
 
 Understand network protocols, configurations, and concepts essential for cloud infrastructure. This section clarifies networking fundamentals that apply across all cloud providers.
 
@@ -5350,7 +5593,7 @@ Understand network protocols, configurations, and concepts essential for cloud i
 - Cloud provider networking guides
 - TCP/IP reference materials
 
-## Practical Exercises
+## Networking - Practical Exercises
 
 **📝 Complete exercises in:** [exercises/01-foundations/05-networking/](../../../exercises/01-foundations/05-networking/)  
 **💡 Reference examples in:** [examples/01-foundations/05-networking/](../../../examples/01-foundations/05-networking/)
@@ -5361,7 +5604,7 @@ Understand network protocols, configurations, and concepts essential for cloud i
 4. Set up basic routing
 5. Test network connectivity and troubleshooting
 
-## Notes
+## Networking - Notes
 
 Document your learnings here:
 - Network diagrams
@@ -5374,7 +5617,7 @@ Document your learnings here:
 
 ## Development Basics
 
-## Purpose
+## Development Basics - Purpose
 
 Learn essential development tools and practices needed for infrastructure automation and cloud-native application development.
 
@@ -5410,7 +5653,7 @@ Choose one primary language (recommendations):
 - Language-specific learning resources
 - API design guides
 
-## Practical Exercises
+## Development Basics - Practical Exercises
 
 **📝 Complete exercises in:** [exercises/01-foundations/06-development-basics/](../../../exercises/01-foundations/06-development-basics/)  
 **💡 Reference examples in:** [examples/01-foundations/06-development-basics/](../../../examples/01-foundations/06-development-basics/)
@@ -5421,7 +5664,7 @@ Choose one primary language (recommendations):
 4. Write and run tests
 5. Use Git for version control
 
-## Notes
+## Development Basics - Notes
 
 Document your learnings:
 - Code examples

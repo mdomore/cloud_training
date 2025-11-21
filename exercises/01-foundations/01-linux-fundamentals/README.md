@@ -1,5 +1,7 @@
 # Linux Fundamentals - Exercises
 
+**📚 Before starting:** Make sure you understand the `sudo` command - see [Understanding sudo](../../../docs/01-foundations.md#25-understanding-sudo)
+
 ## Exercise 1: File System Navigation
 
 **Objective:** Master basic file system navigation and understanding.
@@ -18,6 +20,14 @@
    # - What is its purpose?
    # - What types of files are stored there?
    # - Can regular users write to it?
+   #
+   # 📚 Reference: See documentation for answers:
+   # - /bin: ../../docs/01-foundations.md#bin-and-sbin---essential-binaries
+   # - /etc: ../../docs/01-foundations.md#etc---configuration-files
+   # - /var: ../../docs/01-foundations.md#var---variable-data
+   # - /usr: ../../docs/01-foundations.md#usr---user-programs
+   # - /opt: ../../docs/01-foundations.md#opt---optional-software
+   # Full section: ../../docs/01-foundations.md#1-file-system-hierarchy
    ```
 
 2. **Find and analyze system files**
@@ -48,8 +58,11 @@
 ### Questions to Answer:
 
 - What is the difference between `/bin` and `/usr/bin`?
+  - 📚 **Answer**: See [File System Hierarchy - /bin and /usr](../../../docs/01-foundations.md#1-file-system-hierarchy)
 - Why is `/etc` important for system administration?
+  - 📚 **Answer**: See [/etc - Configuration Files](../../../docs/01-foundations.md#etc---configuration-files)
 - What happens to files in `/tmp` on reboot?
+  - 📚 **Answer**: See [/tmp - Temporary Files](../../../docs/01-foundations.md#tmp---temporary-files)
 
 ---
 
@@ -73,6 +86,9 @@
    ```
 
 2. **Create and manage users** (requires sudo)
+   
+   **📚 Reference:** [Understanding sudo](../../../docs/01-foundations.md#25-understanding-sudo) - Learn about sudo before attempting this
+   
    ```bash
    # Create a new user
    sudo useradd -m -s /bin/bash testuser
@@ -115,8 +131,11 @@
 ### Questions to Answer:
 
 - What is the difference between primary and secondary groups?
+  - 📚 **Answer**: See [Users, Groups, and Permissions](../../../docs/01-foundations.md#2-users-groups-and-permissions)
 - What UID does root have?
+  - 📚 **Answer**: See [/etc/passwd - User Accounts](../../../docs/01-foundations.md#etcpasswd---user-accounts)
 - Why should you use `-aG` instead of `-G` when adding users to groups?
+  - 📚 **Answer**: See [User Management](../../../docs/01-foundations.md#2-users-groups-and-permissions)
 
 ---
 
@@ -202,8 +221,11 @@
 ### Questions to Answer:
 
 - What does 755 mean in octal notation?
+  - 📚 **Answer**: See [File Permissions](../../../docs/01-foundations.md#3-file-permissions-and-ownership)
 - When would you use SUID?
+  - 📚 **Answer**: See [Special Permissions](../../../docs/01-foundations.md#special-permissions)
 - What's the difference between SUID and SGID?
+  - 📚 **Answer**: See [Special Permissions](../../../docs/01-foundations.md#special-permissions)
 
 ---
 
@@ -289,8 +311,11 @@
 ### Questions to Answer:
 
 - What's the difference between `ps aux` and `ps -ef`?
+  - 📚 **Answer**: See [Process Management](../../../docs/01-foundations.md#3-process-management)
 - When would you use `nohup` vs regular background jobs?
+  - 📚 **Answer**: See [Process Management](../../../docs/01-foundations.md#3-process-management)
 - What does a zombie process mean?
+  - 📚 **Answer**: See [Process Management](../../../docs/01-foundations.md#3-process-management)
 
 ---
 
@@ -398,8 +423,11 @@
 ### Questions to Answer:
 
 - What's the difference between `start` and `enable`?
+  - 📚 **Answer**: See [System Services (systemd)](../../../docs/01-foundations.md#4-system-services-systemd)
 - When would you use `reload` vs `restart`?
+  - 📚 **Answer**: See [System Services (systemd)](../../../docs/01-foundations.md#4-system-services-systemd)
 - What is a systemd unit?
+  - 📚 **Answer**: See [System Services (systemd)](../../../docs/01-foundations.md#4-system-services-systemd)
 
 ---
 
