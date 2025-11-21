@@ -24,8 +24,8 @@
   - [Learning Resources](#learning-resources)
   - [Practical Exercises](#practical-exercises)
   - [Notes](#notes)
-    - [Linux Fundamentals](#linux-fundamentals)
-  - [Linux Fundamentals - Purpose](#linux-fundamentals---purpose)
+  - [Linux Fundamentals](#linux-fundamentals)
+    - [Linux Fundamentals - Purpose](#linux-fundamentals---purpose)
   - [Linux Fundamentals - Learning Objectives](#linux-fundamentals---learning-objectives)
   - [1. File System Hierarchy](#1-file-system-hierarchy)
   - [2. Users, Groups, and Permissions](#2-users-groups-and-permissions)
@@ -36,8 +36,8 @@
   - [Linux Fundamentals - Practical Exercises](#linux-fundamentals---practical-exercises)
   - [Common Commands Reference](#common-commands-reference)
   - [Linux Fundamentals - Notes](#linux-fundamentals---notes)
-    - [Shell Scripting](#shell-scripting)
-  - [Shell Scripting - Purpose](#shell-scripting---purpose)
+  - [Shell Scripting](#shell-scripting)
+    - [Shell Scripting - Purpose](#shell-scripting---purpose)
   - [Shell Scripting - Learning Objectives](#shell-scripting---learning-objectives)
   - [1. Shell Basics](#1-shell-basics)
   - [2. Variables](#2-variables)
@@ -51,8 +51,8 @@
     - [Example 4: Log Monitoring Script](#example-4-log-monitoring-script)
   - [Scripting Best Practices Summary](#scripting-best-practices-summary)
   - [Shell Scripting - Notes](#shell-scripting---notes)
-    - [System Configuration](#system-configuration)
-  - [System Configuration - Purpose](#system-configuration---purpose)
+  - [System Configuration](#system-configuration)
+    - [System Configuration - Purpose](#system-configuration---purpose)
   - [System Configuration - Learning Objectives](#system-configuration---learning-objectives)
   - [Topics to Cover](#topics-to-cover)
   - [Learning Resources](#learning-resources)
@@ -61,16 +61,16 @@
   - [Detailed Examples and Commands](#detailed-examples-and-commands)
   - [Troubleshooting Guide](#troubleshooting-guide)
   - [System Configuration - Notes](#system-configuration---notes)
-    - [Security Basics](#security-basics)
-  - [Security Basics - Purpose](#security-basics---purpose)
+  - [Security Basics](#security-basics)
+    - [Security Basics - Purpose](#security-basics---purpose)
   - [Security Basics - Learning Objectives](#security-basics---learning-objectives)
   - [Topics to Cover](#topics-to-cover)
   - [Learning Resources](#learning-resources)
   - [Security Basics - Practical Exercises](#security-basics---practical-exercises)
   - [Security Checklist](#security-checklist)
-  - [Configuration Files Reference](#configuration-files-reference)
+  - [Configuration Files Reference](#configuration-files-reference-1)
   - [Detailed Examples and Configurations](#detailed-examples-and-configurations)
-  - [Security Checklist](#security-checklist)
+  - [Security Checklist (Detailed)](#security-checklist-detailed)
   - [Troubleshooting Security Issues](#troubleshooting-security-issues)
   - [Security Basics - Notes](#security-basics---notes)
   - [Networking](#networking)
@@ -230,13 +230,13 @@ Use the Notes sections throughout this documentation for documenting your learni
 
 ---
 
-### Linux Fundamentals
+## Linux Fundamentals
 
-## Linux Fundamentals - Purpose
+### Linux Fundamentals - Purpose
 
 Learn the essential Linux concepts and commands needed for system administration and cloud infrastructure management. This section provides comprehensive coverage of Linux fundamentals with detailed explanations and practical examples.
 
-## Linux Fundamentals - Learning Objectives
+### Linux Fundamentals - Learning Objectives
 
 By the end of this section, you should be able to:
 - Navigate and understand the Linux file system hierarchy
@@ -247,7 +247,7 @@ By the end of this section, you should be able to:
 
 ---
 
-## 1. File System Hierarchy
+### 1. File System Hierarchy
 
 ### Understanding the Linux File System
 
@@ -497,7 +497,7 @@ df -h
 
 ---
 
-## 2. Users, Groups, and Permissions
+### 2. Users, Groups, and Permissions
 
 ### Understanding Users and Groups
 
@@ -1033,7 +1033,7 @@ getfacl /shared
 
 ---
 
-## 2.5. Understanding sudo
+### 2.5. Understanding sudo
 
 ### What is sudo?
 
@@ -1275,7 +1275,7 @@ sudo grep sudo /var/log/auth.log
 
 ---
 
-## 3. Process Management
+### 3. Process Management
 
 ### Understanding Processes
 
@@ -1782,7 +1782,7 @@ watch -n 1 'ps aux | grep processname'
 
 ---
 
-## 4. System Services (systemd)
+### 4. System Services (systemd)
 
 ### Understanding systemd
 
@@ -2044,7 +2044,7 @@ sudo systemctl isolate multi-user.target
 
 ---
 
-## Linux Fundamentals - Practical Exercises
+### Linux Fundamentals - Practical Exercises
 
 **📝 Complete exercises in:** [exercises/01-foundations/01-linux-fundamentals/](../../../exercises/01-foundations/01-linux-fundamentals/)  
 **💡 Reference examples in:** [examples/01-foundations/01-linux-fundamentals/](../../../examples/01-foundations/01-linux-fundamentals/)
@@ -2143,7 +2143,7 @@ sudo systemctl status testservice
 
 ---
 
-## Common Commands Reference
+### Common Commands Reference
 
 ### File System
 ```bash
@@ -2194,7 +2194,7 @@ journalctl -u service      # View logs
 
 ---
 
-## Linux Fundamentals - Notes
+### Linux Fundamentals - Notes
 
 Document your learnings, commands, and configurations here. Include:
 - Useful commands and their options
@@ -2206,13 +2206,13 @@ Document your learnings, commands, and configurations here. Include:
 
 ---
 
-### Shell Scripting
+## Shell Scripting
 
-## Shell Scripting - Purpose
+### Shell Scripting - Purpose
 
 Learn to write shell scripts for automation, system administration, and cloud infrastructure management. Master Bash/Zsh scripting to automate repetitive tasks with comprehensive examples and best practices.
 
-## Shell Scripting - Learning Objectives
+### Shell Scripting - Learning Objectives
 
 By the end of this section, you should be able to:
 - Write functional shell scripts with proper structure
@@ -2223,7 +2223,7 @@ By the end of this section, you should be able to:
 
 ---
 
-## 1. Shell Basics
+### 1. Shell Basics
 
 ### Choosing a Shell
 
@@ -2333,7 +2333,7 @@ echo "Current directory: $(pwd)"
 
 ---
 
-## 2. Variables
+### 2. Variables
 
 ### Variable Types
 
@@ -3219,7 +3219,7 @@ COUNT=$(ls | wc -l)
 
 ---
 
-## 3. Conditionals
+### 3. Conditionals
 
 ### if/else Statements
 
@@ -3445,7 +3445,7 @@ esac
 
 ---
 
-## 4. Loops
+### 4. Loops
 
 ### for Loops
 
@@ -3606,7 +3606,7 @@ done
 
 ---
 
-## 5. Functions
+### 5. Functions
 
 ### Function Definition
 
@@ -3741,7 +3741,7 @@ backup_file "/etc/ssh/sshd_config" "/backup/ssh"
 
 ---
 
-## 6. Error Handling
+### 6. Error Handling
 
 ### Exit Codes
 
@@ -3880,7 +3880,7 @@ log_warn() {
 
 ---
 
-## 7. Input/Output
+### 7. Input/Output
 
 ### Reading Input
 
@@ -4024,7 +4024,7 @@ EOF
 
 ---
 
-## 8. Advanced Topics
+### 8. Advanced Topics
 
 ### Regular Expressions
 
@@ -4131,7 +4131,7 @@ bg %1
 
 ---
 
-## Complete Script Examples
+### Complete Script Examples
 
 **💡 See working examples in:** [examples/01-foundations/02-shell-scripting/](../../../examples/01-foundations/02-shell-scripting/)
 
@@ -4231,7 +4231,7 @@ done
 
 ---
 
-## Scripting Best Practices Summary
+### Scripting Best Practices Summary
 
 1. **Always use shebang**: `#!/bin/bash`
 2. **Set error handling**: `set -euo pipefail`
@@ -4248,7 +4248,7 @@ done
 
 ---
 
-## Shell Scripting - Notes
+### Shell Scripting - Notes
 
 Document your learnings here:
 - Script examples you've created
@@ -4262,11 +4262,11 @@ Document your learnings here:
 
 ### System Configuration
 
-## System Configuration - Purpose
+### System Configuration - Purpose
 
 Learn to configure Linux systems for network, packages, services, and logs. Essential skills for managing cloud infrastructure and servers.
 
-## System Configuration - Learning Objectives
+### System Configuration - Learning Objectives
 
 By the end of this section, you should be able to:
 - Configure network interfaces
@@ -4394,7 +4394,7 @@ By the end of this section, you should be able to:
 - systemd and journalctl man pages
 - Log management best practices
 
-## System Configuration - Practical Exercises
+### System Configuration - Practical Exercises
 
 **📝 Complete exercises in:** [exercises/01-foundations/03-system-configuration/](../../../exercises/01-foundations/03-system-configuration/)  
 **💡 Reference examples in:** [examples/01-foundations/03-system-configuration/](../../../examples/01-foundations/03-system-configuration/)
@@ -4432,7 +4432,7 @@ By the end of this section, you should be able to:
    - Configure services
    - Set up log rotation
 
-## Configuration Files Reference
+### Configuration Files Reference
 
 ### Network
 - `/etc/network/interfaces` - Debian/Ubuntu network config
@@ -4456,7 +4456,7 @@ By the end of this section, you should be able to:
 - `/etc/logrotate.d/` - Service-specific rotation
 - `/etc/rsyslog.conf` - rsyslog configuration
 
-## Detailed Examples and Commands
+### Detailed Examples and Commands
 
 ### Network Configuration Examples
 
@@ -4756,7 +4756,7 @@ grep "Failed password" /var/log/auth.log | wc -l
 sed -n '/2024-01-27 10:00:00/,/2024-01-27 11:00:00/p' /var/log/syslog
 ```
 
-## Troubleshooting Guide
+### Troubleshooting Guide
 
 ### Network Issues
 ```bash
@@ -4807,7 +4807,7 @@ sudo systemctl status servicename
 systemctl list-dependencies servicename
 ```
 
-## System Configuration - Notes
+### System Configuration - Notes
 
 Document your learnings here:
 - Configuration examples
@@ -4822,11 +4822,11 @@ Document your learnings here:
 
 ### Security Basics
 
-## Security Basics - Purpose
+### Security Basics - Purpose
 
 Learn essential Linux security practices to secure servers and cloud infrastructure. Understand SSH hardening, firewall management, access control, and file security.
 
-## Security Basics - Learning Objectives
+### Security Basics - Learning Objectives
 
 By the end of this section, you should be able to:
 - Secure SSH access
@@ -5004,7 +5004,7 @@ By the end of this section, you should be able to:
 - OWASP security guidelines
 - Distribution-specific security guides
 
-## Security Basics - Practical Exercises
+### Security Basics - Practical Exercises
 
 **📝 Complete exercises in:** [exercises/01-foundations/04-security-basics/](../../../exercises/01-foundations/04-security-basics/)  
 **💡 Reference examples in:** [examples/01-foundations/04-security-basics/](../../../examples/01-foundations/04-security-basics/)
@@ -5042,7 +5042,7 @@ By the end of this section, you should be able to:
    - Test security configuration
    - Document security procedures
 
-## Security Checklist
+### Security Checklist
 
 - [ ] SSH hardened (key-based auth, no root login)
 - [ ] Firewall configured (only necessary ports open)
@@ -5055,7 +5055,7 @@ By the end of this section, you should be able to:
 - [ ] Logging and monitoring enabled
 - [ ] Security tools installed
 
-## Configuration Files Reference
+### Configuration Files Reference
 
 ### SSH
 - `/etc/ssh/sshd_config` - SSH server config
@@ -5075,7 +5075,7 @@ By the end of this section, you should be able to:
 - `/etc/shadow` - Password hashes
 - `/etc/group` - Groups
 
-## Detailed Examples and Configurations
+### Detailed Examples and Configurations
 
 ### SSH Configuration Examples
 
@@ -5468,7 +5468,7 @@ sudo apt autoremove -y
 echo "Security hardening complete!"
 ```
 
-## Security Checklist
+### Security Checklist (Detailed)
 
 Use this checklist when securing a new server:
 
@@ -5593,7 +5593,7 @@ Understand network protocols, configurations, and concepts essential for cloud i
 - Cloud provider networking guides
 - TCP/IP reference materials
 
-## Networking - Practical Exercises
+### Networking - Practical Exercises
 
 **📝 Complete exercises in:** [exercises/01-foundations/05-networking/](../../../exercises/01-foundations/05-networking/)  
 **💡 Reference examples in:** [examples/01-foundations/05-networking/](../../../examples/01-foundations/05-networking/)
@@ -5604,7 +5604,7 @@ Understand network protocols, configurations, and concepts essential for cloud i
 4. Set up basic routing
 5. Test network connectivity and troubleshooting
 
-## Networking - Notes
+### Networking - Notes
 
 Document your learnings here:
 - Network diagrams
@@ -5617,7 +5617,7 @@ Document your learnings here:
 
 ## Development Basics
 
-## Development Basics - Purpose
+### Development Basics - Purpose
 
 Learn essential development tools and practices needed for infrastructure automation and cloud-native application development.
 
@@ -5653,7 +5653,7 @@ Choose one primary language (recommendations):
 - Language-specific learning resources
 - API design guides
 
-## Development Basics - Practical Exercises
+### Development Basics - Practical Exercises
 
 **📝 Complete exercises in:** [exercises/01-foundations/06-development-basics/](../../../exercises/01-foundations/06-development-basics/)  
 **💡 Reference examples in:** [examples/01-foundations/06-development-basics/](../../../examples/01-foundations/06-development-basics/)
@@ -5664,7 +5664,7 @@ Choose one primary language (recommendations):
 4. Write and run tests
 5. Use Git for version control
 
-## Development Basics - Notes
+### Development Basics - Notes
 
 Document your learnings:
 - Code examples
