@@ -51,7 +51,9 @@
 ### Questions to Answer:
 
 - What's the difference between TCP and UDP?
+  - 📚 **Answer**: See [Core Protocols](../../../docs/01-foundations.md#2-core-protocols)
 - How do you identify which process is using a port?
+  - 📚 **Answer**: See [Network Concepts](../../../docs/01-foundations.md#3-network-concepts)
 
 ---
 
@@ -123,7 +125,9 @@
 ### Questions to Answer:
 
 - What's the order of DNS resolution?
+  - 📚 **Answer**: See [Core Protocols](../../../docs/01-foundations.md#2-core-protocols)
 - How does /etc/hosts affect DNS resolution?
+  - 📚 **Answer**: See [Core Protocols](../../../docs/01-foundations.md#2-core-protocols)
 
 ---
 
@@ -188,7 +192,9 @@
 ### Questions to Answer:
 
 - What does traceroute show?
+  - 📚 **Answer**: See [Network Concepts](../../../docs/01-foundations.md#3-network-concepts)
 - How do you test if a firewall is blocking a port?
+  - 📚 **Answer**: See [Network Concepts](../../../docs/01-foundations.md#3-network-concepts)
 
 ---
 
@@ -230,7 +236,9 @@
 ### Questions to Answer:
 
 - What's the difference between /24 and /16?
+  - 📚 **Answer**: See [Network Concepts](../../../docs/01-foundations.md#3-network-concepts)
 - How do you calculate the number of hosts in a subnet?
+  - 📚 **Answer**: See [Network Concepts](../../../docs/01-foundations.md#3-network-concepts)
 
 ---
 

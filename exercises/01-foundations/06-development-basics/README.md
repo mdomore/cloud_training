@@ -84,7 +84,9 @@
 ### Questions to Answer:
 
 - What's the difference between `git add` and `git commit`?
+  - 📚 **Answer**: See [Version Control](../../../docs/01-foundations.md#1-version-control)
 - When would you use `git merge` vs `git rebase`?
+  - 📚 **Answer**: See [Version Control](../../../docs/01-foundations.md#1-version-control)
 
 ---
 
@@ -162,7 +164,9 @@
 ### Questions to Answer:
 
 - What's the difference between `read()` and `readlines()`?
+  - 📚 **Answer**: See [Programming Language](../../../docs/01-foundations.md#2-programming-language)
 - Why use `with` statement for file operations?
+  - 📚 **Answer**: See [Programming Language](../../../docs/01-foundations.md#2-programming-language)
 
 ---
 
@@ -246,7 +250,9 @@
 ### Questions to Answer:
 
 - What are the main HTTP methods?
+  - 📚 **Answer**: See [API Development](../../../docs/01-foundations.md#3-api-development)
 - What's the difference between GET and POST?
+  - 📚 **Answer**: See [API Development](../../../docs/01-foundations.md#3-api-development)
 
 ---
 
@@ -305,7 +311,9 @@
 ### Questions to Answer:
 
 - What's the difference between unit and integration tests?
+  - 📚 **Answer**: See [Testing](../../../docs/01-foundations.md#4-testing)
 - Why write tests before code (TDD)?
+  - 📚 **Answer**: See [Testing](../../../docs/01-foundations.md#4-testing)
 
 ---
 

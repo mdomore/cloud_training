@@ -70,7 +70,9 @@
 ### Questions to Answer:
 
 - What's the difference between `ip` and `ifconfig`?
+  - 📚 **Answer**: See [Network Configuration](../../../docs/01-foundations.md#1-network-configuration)
 - How do you make network configuration persistent?
+  - 📚 **Answer**: See [Network Configuration](../../../docs/01-foundations.md#1-network-configuration)
 
 ---
 
@@ -142,7 +144,9 @@
 ### Questions to Answer:
 
 - What's the difference between `apt upgrade` and `apt full-upgrade`?
+  - 📚 **Answer**: See [Package Management](../../../docs/01-foundations.md#2-package-management)
 - How do you find which package provides a specific file?
+  - 📚 **Answer**: See [Package Management](../../../docs/01-foundations.md#2-package-management)
 
 ---
 
@@ -203,7 +207,9 @@
 ### Questions to Answer:
 
 - What's the difference between `restart` and `reload`?
+  - 📚 **Answer**: See [Service Management](../../../docs/01-foundations.md#3-service-management)
 - How do you check service dependencies?
+  - 📚 **Answer**: See [Service Management](../../../docs/01-foundations.md#3-service-management)
 
 ---
 
@@ -283,7 +289,9 @@
 ### Questions to Answer:
 
 - What's the difference between `syslog` and `journalctl`?
+  - 📚 **Answer**: See [Log Management](../../../docs/01-foundations.md#4-log-management)
 - How does logrotate work?
+  - 📚 **Answer**: See [Log Management](../../../docs/01-foundations.md#4-log-management)
 
 ---
 

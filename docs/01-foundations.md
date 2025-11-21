@@ -13,20 +13,20 @@
   - [Estimated Time](#estimated-time)
   - [How to Use This Phase](#how-to-use-this-phase)
   - [System Administration](#system-administration)
-  - [Purpose](#purpose)
-  - [Structure](#structure)
-  - [Topics Covered](#topics-covered)
-    - [1. Linux Fundamentals](#1-linux-fundamentals)
-    - [2. Shell Scripting](#2-shell-scripting)
-    - [3. System Configuration](#3-system-configuration)
-    - [4. Security Basics](#4-security-basics)
+    - [Purpose](#purpose)
+    - [Structure](#structure)
+    - [Topics Covered](#topics-covered)
+        - [1. Linux Fundamentals](#1-linux-fundamentals)
+        - [2. Shell Scripting](#2-shell-scripting)
+        - [3. System Configuration](#3-system-configuration)
+        - [4. Security Basics](#4-security-basics)
   - [How to Use This Section](#how-to-use-this-section)
   - [Learning Resources](#learning-resources)
   - [Practical Exercises](#practical-exercises)
   - [Notes](#notes)
   - [Linux Fundamentals](#linux-fundamentals)
     - [Linux Fundamentals - Purpose](#linux-fundamentals---purpose)
-  - [Linux Fundamentals - Learning Objectives](#linux-fundamentals---learning-objectives)
+    - [Linux Fundamentals - Learning Objectives](#linux-fundamentals---learning-objectives)
   - [1. File System Hierarchy](#1-file-system-hierarchy)
   - [2. Users, Groups, and Permissions](#2-users-groups-and-permissions)
   - [2.5. Understanding sudo](#25-understanding-sudo)
@@ -147,11 +147,11 @@ This phase covers three main areas:
 
 ## System Administration
 
-## Purpose
+### Purpose
 
 Master Linux system administration fundamentals. This knowledge is crucial for managing cloud infrastructure, containers, and automation tools.
 
-## Structure
+### Structure
 
 This section is organized into 4 main topics:
 
@@ -160,33 +160,33 @@ This section is organized into 4 main topics:
 - **System Configuration** - Network, packages, services, logs
 - **Security Basics** - SSH, firewalls, access control, file security
 
-## Topics Covered
+### Topics Covered
 
-### 1. Linux Fundamentals
+#### 1. Linux Fundamentals
 - File system hierarchy
 - Users, groups, and permissions
 - Process management
 - System services (systemd)
 
-### 2. Shell Scripting
+#### 2. Shell Scripting
 - Bash/Zsh basics
 - Variables, conditionals, loops
 - Functions and error handling
 - Scripting best practices
 
-### 3. System Configuration
+#### 3. System Configuration
 - Network configuration
 - Package management
 - Service management
 - Log management
 
-### 4. Security Basics
+#### 4. Security Basics
 - SSH configuration and hardening
 - Firewall management (UFW, firewalld)
 - User access control
 - File permissions and ACLs
 
-## How to Use This Section
+### How to Use This Section
 
 1. **Start with Linux Fundamentals** - Build your base knowledge
 2. **Learn Shell Scripting** - Essential for automation
@@ -200,14 +200,14 @@ This documentation contains:
 - Practical exercises
 - Space for notes and documentation
 
-## Learning Resources
+### Learning Resources
 
 - Linux command-line tutorials
 - System administration guides
 - Shell scripting tutorials
 - Each section has specific resources
 
-## Practical Exercises
+### Practical Exercises
 
 **📝 Complete exercises in:** [exercises/01-foundations/](../../exercises/01-foundations/)
 
@@ -220,7 +220,7 @@ Each topic has specific exercises. Overall goals:
 
 **💡 Reference examples in:** [examples/01-foundations/](../../examples/01-foundations/)
 
-## Notes
+### Notes
 
 Use the Notes sections throughout this documentation for documenting your learnings. Include:
 - Useful commands and their explanations
