@@ -71,12 +71,13 @@ sudo pacman -S virtualbox virtualbox-host-modules-arch
 
 ## 🐧 Step 2: Download Linux ISO
 
-We recommend **Ubuntu Server 22.04 LTS** for learning:
+We recommend **Ubuntu Server 24.04 LTS** (or 22.04 LTS) for learning:
 
 1. **Download Ubuntu Server**
    - Go to: https://ubuntu.com/download/server
-   - Download: **Ubuntu Server 22.04 LTS**
-   - File: `ubuntu-22.04.x-live-server-amd64.iso` (~1.5GB)
+   - Download: **Ubuntu Server 24.04 LTS** (or 22.04 LTS)
+   - File: `ubuntu-24.04.x-live-server-amd64.iso` (~1.5GB)
+   - **Important**: Make sure to download the **amd64** version (not ARM)
 
 2. **Why Ubuntu Server?**
    - Widely used in cloud environments
@@ -99,7 +100,8 @@ We recommend **Ubuntu Server 22.04 LTS** for learning:
 2. **Click "New"**
    - Name: `cloud-training-vm` (or your preferred name)
    - Type: **Linux**
-   - Version: **Ubuntu (64-bit)**
+   - Version: **Ubuntu (64-bit)** or **Ubuntu 24.04 LTS (64-bit)**
+   - **Note**: If VirtualBox shows "ARM 64-bit" but you downloaded amd64 ISO, that's okay - you'll install manually
    - Click **Next**
 
 3. **Allocate Memory (RAM)**
@@ -108,37 +110,50 @@ We recommend **Ubuntu Server 22.04 LTS** for learning:
    - **Maximum**: Don't exceed half your total RAM
    - Click **Next**
 
-4. **Create Virtual Hard Disk**
+4. **Hardware Configuration**
+   - **Base Memory**: 2048 MB (2 GB) - adjust slider if needed
+   - **Number of CPUs**: **2-4 CPUs** (recommended: 2 if you have 4+ cores, 4 if you have 8+ cores)
+   - **Disk Size**: **25 GB** (minimum) or **40 GB** (recommended)
+   - **Use EFI**: ✅ Check this box (recommended for Ubuntu 24.04)
+   - Click **Next**
+
+5. **Create Virtual Hard Disk**
    - Select: **Create a virtual hard disk now**
    - Click **Create**
 
-5. **Hard Disk File Type**
+6. **Hard Disk File Type**
    - Select: **VDI (VirtualBox Disk Image)**
    - Click **Next**
 
-6. **Storage on Physical Hard Disk**
+7. **Storage on Physical Hard Disk**
    - Select: **Dynamically allocated** (recommended)
    - Click **Next**
 
-7. **File Location and Size**
-   - Size: **20 GB** (minimum) or **40 GB** (recommended)
-   - Location: Keep default or choose custom location
+8. **File Location and Size**
+   - Size: **25 GB** (minimum) or **40 GB** (recommended)
+   - Location: Keep default (`/Users/yourname/VirtualBox VMs/`) or choose custom location
    - Click **Create**
+
+**Note**: VirtualBox may show a warning that it "can't install an OS from the selected ISO" - this is normal. You'll install Ubuntu manually in the next step.
 
 ### Configure VM Settings
 
 1. **Select your VM** and click **Settings**
 
 2. **System > Processor**
-   - Processors: **2** (if you have 4+ cores)
+   - Processors: **2-4** (match what you set during creation)
    - Enable: **Enable PAE/NX** (if available)
+   - **Extended Features**: Enable **Enable Nested VT-x/AMD-V** (if available, improves performance)
    - Click **OK**
 
 3. **Storage**
-   - Click on **Empty** under Controller: IDE
-   - Click the **CD icon** on the right
-   - Click **Choose a disk file**
-   - Select your downloaded Ubuntu ISO file
+   - Click on **Empty** under Controller: IDE (or SATA Controller)
+   - Click the **CD/DVD icon** on the right (or the disk icon)
+   - Click **Choose a disk file** (or **Choose...**)
+   - Navigate to your Downloads folder
+   - Select your downloaded Ubuntu ISO file (`ubuntu-24.04.x-live-server-amd64.iso`)
+   - Click **Open** (or **OK**)
+   - Verify the ISO appears in the storage list
    - Click **OK**
 
 4. **Network** (Important!)
