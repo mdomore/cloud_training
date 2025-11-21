@@ -170,11 +170,12 @@ If VirtualBox detected your OS and shows the "Set up unattended guest OS install
    - You'll see the login prompt
    - Log in with your username (`student`) and password
 
-**⚠️ Important: Keyboard Layout Issue**
-- If you have a **French keyboard** (AZERTY) but the VM detects QWERTY, you'll need to configure it after installation
-- See **Step 5.5: Configure Keyboard Layout** below for the fix
+**⚠️ Important Notes:**
+- **SSH is NOT installed by default** with unattended installation
+- You must install SSH after first login (see **Step 5.1: Install and Configure SSH**)
+- If you have a **French keyboard** (AZERTY) but the VM detects QWERTY, configure it after installation (see **Step 5.5: Configure Keyboard Layout**)
 
-**Skip to Step 5: Verify Installation** if you used unattended installation.
+**Continue with Step 5: Verify Installation** after logging in.
 
 ### Option B: Manual Installation (If Unattended Not Available)
 
@@ -271,6 +272,95 @@ free -h
 sudo apt update
 sudo apt upgrade -y
 ```
+
+## 🔐 Step 5.1: Install and Configure SSH (Required)
+
+**Important**: SSH is not installed by default with unattended installation. You need to install it to access the VM remotely.
+
+### Install OpenSSH Server
+
+```bash
+# Update package list
+sudo apt update
+
+# Install OpenSSH server
+sudo apt install -y openssh-server
+
+# Check if SSH service is running
+sudo systemctl status ssh
+
+# If not running, start it
+sudo systemctl start ssh
+
+# Enable SSH to start on boot
+sudo systemctl enable ssh
+```
+
+### Verify SSH Installation
+
+```bash
+# Check SSH service status
+sudo systemctl status ssh
+
+# Check if SSH is listening on port 22
+sudo ss -tlnp | grep :22
+
+# You should see something like:
+# LISTEN 0 128 0.0.0.0:22 0.0.0.0:* users:(("sshd",pid=1234,fd=3))
+```
+
+### Configure SSH (Optional but Recommended)
+
+```bash
+# Backup the original SSH config
+sudo cp /etc/ssh/sshd_config /etc/ssh/sshd_config.backup
+
+# Edit SSH configuration
+sudo nano /etc/ssh/sshd_config
+```
+
+**Recommended settings** (uncomment and modify if needed):
+```
+# Allow password authentication (for initial setup)
+PasswordAuthentication yes
+
+# Permit root login (set to no for security)
+PermitRootLogin no
+
+# Allow your user to login
+AllowUsers student
+
+# Change default port (optional, for security)
+# Port 2222
+```
+
+Save and exit (Ctrl+X, then Y, then Enter), then:
+
+```bash
+# Test SSH configuration
+sudo sshd -t
+
+# If no errors, restart SSH service
+sudo systemctl restart ssh
+
+# Verify SSH is still running
+sudo systemctl status ssh
+```
+
+### Get VM IP Address
+
+```bash
+# Get the VM's IP address
+ip addr show
+
+# Or use this command
+hostname -I
+
+# Look for the IP address (usually 10.0.2.15 with NAT)
+# Example output: 10.0.2.15
+```
+
+**Note**: With NAT networking, the VM's IP is typically `10.0.2.15`, but you'll need to set up port forwarding to SSH from your host machine (see Step 7 below).
 
 ## ⌨️ Step 5.5: Configure Keyboard Layout (French Keyboard)
 
@@ -377,11 +467,13 @@ If you want to use your French keyboard layout even when VirtualBox captures key
    - Select **Restore Snapshot**
    - VM will return to that state
 
-## 🔧 Step 7: Basic Configuration
+## 🔧 Step 7: Enable SSH Access from Host Machine
 
-### Enable SSH Access (Optional but Recommended)
+**Prerequisites**: Make sure SSH is installed and running (see Step 5.1)
 
-If you want to SSH from your host machine:
+### Configure Port Forwarding in VirtualBox
+
+To SSH from your host machine (Mac/Linux) to the VM:
 
 1. **In VM**, check IP address:
    ```bash
