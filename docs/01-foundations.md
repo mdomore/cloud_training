@@ -431,6 +431,72 @@ cd ../var/log
 pwd
 ```
 
+#### `mkdir` - Create Directories
+```bash
+# Create a single directory
+mkdir mydir
+
+# Create multiple directories
+mkdir dir1 dir2 dir3
+
+# Create directory with parent directories (-p = parents)
+mkdir -p /path/to/new/directory
+# Creates all parent directories if they don't exist
+
+# Create directory tree with subdirectories (brace expansion)
+mkdir -p project/{src,tests,docs,logs}
+# Creates:
+# project/
+#   ├── src/
+#   ├── tests/
+#   ├── docs/
+#   └── logs/
+
+# Create nested directory structure
+mkdir -p app/{frontend/{components,pages},backend/{api,models},config}
+# Creates:
+# app/
+#   ├── frontend/
+#   │   ├── components/
+#   │   └── pages/
+#   ├── backend/
+#   │   ├── api/
+#   │   └── models/
+#   └── config/
+
+# Create multiple directory trees
+mkdir -p {logs,data,backups}/{2024,2025}/{01,02,03}
+# Creates directories for logs, data, and backups for years 2024-2025, months 01-03
+
+# Create directory with specific permissions
+mkdir -m 755 mydir
+# Creates directory with 755 permissions
+
+# Create directory and set ownership (requires sudo)
+sudo mkdir -p /opt/myapp/{bin,etc,var/log}
+sudo chown user:group /opt/myapp
+
+# Common use case: Create project structure
+mkdir -p ~/projects/myproject/{src/{main,test},docs,scripts,logs}
+```
+
+**Key Options:**
+- `-p, --parents`: Create parent directories as needed, no error if directory exists
+- `-m, --mode=MODE`: Set file mode (permissions) for created directories
+- `-v, --verbose`: Print a message for each created directory
+
+**Practical Examples:**
+```bash
+# Create a complete web application structure
+mkdir -p webapp/{static/{css,js,images},templates,config,logs}
+
+# Create backup directory structure with date
+mkdir -p backups/$(date +%Y-%m-%d)/{full,incremental}
+
+# Create user workspace structure
+mkdir -p ~/workspace/{projects,scripts,notes,backups}
+```
+
 #### `find` - Search for Files
 ```bash
 # Find files by name
@@ -2066,6 +2132,8 @@ The exercises cover:
 ls -la          # List with details
 cd ~            # Go home
 pwd             # Current directory
+mkdir -p dir    # Create directory (with parents)
+mkdir -p a/{b,c} # Create multiple subdirectories
 find / -name    # Search files
 du -sh          # Directory size
 df -h           # Disk space
