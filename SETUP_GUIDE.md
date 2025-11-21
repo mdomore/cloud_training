@@ -76,8 +76,10 @@ We recommend **Ubuntu Server 24.04 LTS** (or 22.04 LTS) for learning:
 1. **Download Ubuntu Server**
    - Go to: https://ubuntu.com/download/server
    - Download: **Ubuntu Server 24.04 LTS** (or 22.04 LTS)
-   - File: `ubuntu-24.04.x-live-server-amd64.iso` (~1.5GB)
-   - **Important**: Make sure to download the **amd64** version (not ARM)
+   - **Important**: 
+     - For **Intel/AMD Macs**: Download `ubuntu-24.04.x-live-server-amd64.iso` (~1.5GB)
+     - For **Apple Silicon (M1/M2/M3) Macs**: Download `ubuntu-24.04.x-live-server-arm64.iso` (~1.5GB)
+   - Check your Mac's architecture: `uname -m` (shows `x86_64` for Intel or `arm64` for Apple Silicon)
 
 2. **Why Ubuntu Server?**
    - Widely used in cloud environments
@@ -134,9 +136,45 @@ We recommend **Ubuntu Server 24.04 LTS** (or 22.04 LTS) for learning:
    - Location: Keep default (`/Users/yourname/VirtualBox VMs/`) or choose custom location
    - Click **Create**
 
-**Note**: VirtualBox may show a warning that it "can't install an OS from the selected ISO" - this is normal. You'll install Ubuntu manually in the next step.
+**Note**: 
+- If VirtualBox detects the OS and offers **unattended installation**, you can use it (easier option - see below)
+- If VirtualBox shows "can't install an OS from the selected ISO", you'll install Ubuntu manually (see Step 4)
 
-### Configure VM Settings
+### Option A: Unattended Installation (Recommended if Available)
+
+If VirtualBox detected your OS and shows the "Set up unattended guest OS installation" screen:
+
+1. **User Name and Password**
+   - **User Name**: Change `vboxuser` to `student` (or your preferred username)
+   - **Password**: Enter a **strong password** (you'll need this to log in)
+   - **Confirm Password**: Enter the same password again
+   - **Note**: Remember this password - you'll use it to log in!
+
+2. **Install Guest Additions** (Optional but Recommended)
+   - ✅ Check **Install Guest Additions** (improves performance and enables features)
+   - The Guest Additions ISO path should be auto-detected
+
+3. **OS Installation Options**
+   - **Product Key**: Leave empty (not needed for Ubuntu)
+   - **Host Name**: `cloud-training-vm` (or your preferred name)
+   - **Domain Name**: `myguest.virtualbox.org` (or leave default)
+   - **Install in Background**: Leave unchecked (so you can see the installation progress)
+
+4. **Click Next**
+   - VirtualBox will create the VM and start the installation automatically
+   - You'll see the installation progress
+   - This takes about 10-15 minutes
+
+5. **After Installation**
+   - The VM will automatically reboot
+   - You'll see the login prompt
+   - Log in with your username (`student`) and password
+
+**Skip to Step 5: Verify Installation** if you used unattended installation.
+
+### Option B: Manual Installation (If Unattended Not Available)
+
+### Configure VM Settings (Manual Installation Path)
 
 1. **Select your VM** and click **Settings**
 
@@ -168,7 +206,9 @@ We recommend **Ubuntu Server 24.04 LTS** (or 22.04 LTS) for learning:
    - Enable: **Auto-mount** and **Make Permanent**
    - Click **OK**
 
-## 🚀 Step 4: Install Ubuntu Server
+## 🚀 Step 4: Install Ubuntu Server (Manual Installation)
+
+**Note**: Only follow this if you didn't use unattended installation in Step 3.
 
 1. **Start the VM**
    - Select your VM
